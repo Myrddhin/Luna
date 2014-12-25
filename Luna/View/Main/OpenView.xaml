@@ -1,0 +1,26 @@
+﻿<dxlc:LayoutControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    x:Class="Luna.UI.Main.OpenView"
+    mc:Ignorable="d"
+    Orientation="Vertical"
+    d:DesignHeight="300" d:DesignWidth="300">
+    <dxlc:LayoutControl.Resources>
+        <BooleanToVisibilityConverter x:Key="CVT_Visibility" />
+    </dxlc:LayoutControl.Resources>
+    <dxlc:LayoutGroup Visibility="{Binding ExistingRepositoryVisible, Converter={StaticResource CVT_Visibility}}" Orientation="Vertical" Header="Dernières bases de données utilisées" View="GroupBox" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <dxe:ListBoxEdit  ValueMember="Id" DisplayMember="Name" ItemsSource="{Binding Existing}" SelectedItem="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged}" />
+        <dxlc:LayoutItem>
+            <dxe:CheckEdit Content="Utiliser cette base de donnée par défaut" />
+        </dxlc:LayoutItem>
+    </dxlc:LayoutGroup>
+    <dxlc:LayoutGroup Header="Nouvelle base de donnée" View="GroupBox" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <dxe:ListBoxEdit SelectedItem="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged}"  ItemsSource="{Binding New}" ValueMember="Id" DisplayMember="Name">
+        </dxe:ListBoxEdit>
+    </dxlc:LayoutGroup>
+</dxlc:LayoutControl>

@@ -1,0 +1,19 @@
+﻿<Application x:Class="Luna.UI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Luna.UI">
+    <Application.Resources>
+        <ResourceDictionary>
+            <BitmapImage UriSource="pack://application:,,,/Luna.UI;component/Resources/back.jpeg" x:Key="IMG_Splash" />
+            <BitmapImage UriSource="pack://application:,,,/Luna.UI;component/Resources/mni_search.png" x:Key="MNI_search" />
+            <BitmapImage UriSource="pack://application:,,,/Luna.UI;component/Resources/mni_refresh.png" x:Key="MNI_refresh" />
+            <BitmapImage UriSource="pack://application:,,,/Luna.UI;component/Resources/mni_save.png" x:Key="MNI_save" />
+            <BitmapImage UriSource="pack://application:,,,/Luna.UI;component/Resources/mni_export.png" x:Key="MNI_export" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <local:LunaBootstrapper x:Key="bootstrapper" />
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
