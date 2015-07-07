@@ -13,15 +13,15 @@ namespace Luna.Data.Local.SQLite.Updates.NewMoon
         {
             var buffer = new Queue<string>();
             buffer.Enqueue(@"
-CREATE TABLE `Repositories`
+CREATE TABLE `RepositorySettings`
 (
     Id  GUID PRIMARY KEY,
     name TEXT,
     is_default INTEGER,
     schema_version NUMERIC,
-    is_online INTEGER,
-    path TEXT,
-    api_key TEXT)
+    online INTEGER,
+    last_used DATE NULL
+);
 ");
 
             buffer.Enqueue("INSERT INTO SchemaVersions ( Version) VALUES(1)");

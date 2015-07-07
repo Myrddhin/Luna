@@ -1,10 +1,12 @@
-﻿using Luna.Data.Local.Configuration;
+﻿using System;
+using System.IO;
+using Luna.Data.Local.CRM;
 using Luna.Data.Local.Storage;
 using NewMoon = Luna.Data.Local.SQLite.Updates.NewMoon;
 
 namespace Luna.Data.Local.SQLite
 {
-    public class LocalRepositoryManager : RepositoryManager, ILocalRepositoryManager
+    internal class LocalRepositoryManager : DataContainer, IRepositoryDataContainer
     {
         public LocalRepositoryManager()
         {
@@ -12,9 +14,17 @@ namespace Luna.Data.Local.SQLite
             DefaultResourceName = "Luna.Data.Local.repository.db3";
         }
 
-        public IConfigurationContext GetConfigurationContext()
+        public ICRMDataContext GetCRMContext()
         {
-            return new ConfigurationContext(ConnectionString);
+            return new CRMContext(ConnectionString);
+        }
+
+        public Guid InternalRepositoryId
+        {
+            get
+            {
+                return new Guid(Path.GetFileNameWithoutExtension(ConnectionBuilder.DataSource));
+            }
         }
     }
 }

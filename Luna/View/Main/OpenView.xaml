@@ -6,21 +6,57 @@
     xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
     xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
     xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:lc="clr-namespace:Loki.UI.Wpf.Converters;assembly=Loki.UI.Wpf"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:Custom="http://schemas.devexpress.com/winfx/2008/xaml/editors/themekeys"
     x:Class="Luna.UI.Main.OpenView"
     mc:Ignorable="d"
     Orientation="Vertical"
-    d:DesignHeight="300" d:DesignWidth="300">
-    <dxlc:LayoutControl.Resources>
-        <BooleanToVisibilityConverter x:Key="CVT_Visibility" />
-    </dxlc:LayoutControl.Resources>
-    <dxlc:LayoutGroup Visibility="{Binding ExistingRepositoryVisible, Converter={StaticResource CVT_Visibility}}" Orientation="Vertical" Header="Dernières bases de données utilisées" View="GroupBox" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-        <dxe:ListBoxEdit  ValueMember="Id" DisplayMember="Name" ItemsSource="{Binding Existing}" SelectedItem="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged}" />
+    Width="500"
+    d:DesignHeight="430" d:DesignWidth="600">
+    <dxlc:LayoutGroup Visibility="{Binding ExistingRepositoryVisible, Converter={StaticResource TrueToVisibleConverter}}" Orientation="Vertical" Header="Dernières bases de données utilisées" View="GroupBox" HorizontalAlignment="Stretch" dxlc:LayoutControl.AllowVerticalSizing="True">
+        <dxg:GridControl MinWidth="400"  ItemsSource="{Binding Local}" SelectionMode="Row" SelectedItem="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged}">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="Name" Header="Nom" />
+                <dxg:GridColumn FieldName="LastUsed" Header="Dernière utilisation">
+                    <dxg:GridColumn.EditSettings>
+                        <dxe:DateEditSettings Mask="G" MaskCulture="fr-FR" MaskUseAsDisplayFormat="True" />
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+                <dxg:GridColumn FieldName="Online" Header="Connectée" />
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.View>
+                <dxg:TableView AllowEditing="False"  ShowAutoFilterRow="False" ShowGroupPanel="False" AutoWidth="True" />
+            </dxg:GridControl.View>
+        </dxg:GridControl>
         <dxlc:LayoutItem>
             <dxe:CheckEdit Content="Utiliser cette base de donnée par défaut" />
         </dxlc:LayoutItem>
     </dxlc:LayoutGroup>
-    <dxlc:LayoutGroup Header="Nouvelle base de donnée" View="GroupBox" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-        <dxe:ListBoxEdit SelectedItem="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged}"  ItemsSource="{Binding New}" ValueMember="Id" DisplayMember="Name">
-        </dxe:ListBoxEdit>
+    <dxlc:LayoutGroup MaxHeight="100" Visibility="{Binding OnlineMode, Converter={StaticResource FalseToVisibleConverter}}" Header="Nouvelle base de donnée" View="GroupBox">
+        <dxlc:LayoutItem>
+            <dxe:ButtonEdit IsTextEditable="False" ShowText="False" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" AllowDefaultButton="False" MinHeight="50">
+                <dxe:ButtonInfo Content="Base de donnée locale" Command="{Binding New}" CommandParameter="{Binding NewLocal}" />
+                <dxe:ButtonInfo Content="Base de donnée connectée" Command="{Binding New}" CommandParameter="{Binding NewWeb}" />
+            </dxe:ButtonEdit>
+        </dxlc:LayoutItem>
+    </dxlc:LayoutGroup>
+    <dxlc:LayoutGroup Visibility="{Binding OnlineMode, Converter={StaticResource TrueToVisibleConverter}}" Orientation="Vertical" Header="Bases de données disponibles" View="GroupBox"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <dxg:GridControl MinWidth="400"  ItemsSource="{Binding Online}" SelectionMode="Row" SelectedItem="{Binding SelectedOnlineItem, UpdateSourceTrigger=PropertyChanged}">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="Name" Header="Nom" />
+                <dxg:GridColumn FieldName="LastUsed" Header="Dernière utilisation">
+                    <dxg:GridColumn.EditSettings>
+                        <dxe:DateEditSettings Mask="G" MaskCulture="fr-FR" MaskUseAsDisplayFormat="True" />
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.View>
+                <dxg:TableView AllowEditing="False"  ShowAutoFilterRow="False" ShowGroupPanel="False" AutoWidth="True" />
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+        <dxlc:LayoutItem>
+            <dxe:CheckEdit Content="Utiliser cette base de donnée par défaut" />
+        </dxlc:LayoutItem>
     </dxlc:LayoutGroup>
 </dxlc:LayoutControl>

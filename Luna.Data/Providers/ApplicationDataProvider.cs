@@ -1,116 +1,86 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.Collections.Generic;
 using System.Linq;
-using Loki.Common;
+using System.Threading.Tasks;
 using Luna.Data.Local.Storage;
 using Luna.Model.Storage;
+using Luna.Services.Configuration;
 
 namespace Luna.Data.Storage
 {
-    internal class ApplicationDataProvider : BaseObject, IApplicationDataProvider
+    internal class ApplicationDataProvider : BaseProvider, IApplicationDataProvider
     {
-        private Lazy<IApplicationDataContext> globalContext;
+        public IRepositoryStore RepositoryStore { get; set; }
 
-        public ApplicationDataProvider()
-        {
-            globalContext = new Lazy<IApplicationDataContext>(() => ApplicationStore.GetApplicationDataContext());
-        }
-
-        public IQueryable<Repository> Repositories
-        {
-            get { return globalContext.Value.Repositories; }
-        }
-
-        protected IApplicationDataContext DataContext
-        {
-            get { return globalContext.Value; }
-        }
-
-        public IGlobalRepositoryManager ApplicationStore
+        public IApplicationSettingsDataContext DataContext
         {
             get;
             set;
         }
 
-        IRepositoryManager IApplicationDataProvider.ApplicationStore
+        public async Task<IEnumerable<Repository>> GetCloudRepositoriesAsync()
         {
-            get { return this.ApplicationStore; }
+            return await RepositoryStore.GetAllAsync();
         }
 
-        #region Property changed
-
-        /// <summary>
-        /// Se produit lorsqu'une valeur de propriété est modifiée.
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Raises the <see cref="PropertyChanged" /> event.
-        /// </summary>
-        /// <param name="e"><see cref="PropertyChangedEventArgs" /> object that provides the
-        /// arguments for the event.</param>
-        protected virtual void OnPropertyChanged(PropertyChangedEventArgs e)
+        public IQueryable<RepositorySettings> LocalRepositories
         {
-            PropertyChangedEventHandler handler = PropertyChanged;
-
-            if (handler != null)
-            {
-                handler(this, e);
-            }
+            get { return DataContext.RepositorySettings; }
         }
 
-        #endregion Property changed
-
-        #region Current
-
-        private Repository current;
-
-        private PropertyChangedEventArgs currentChangedArgs = ObservableHelper.CreateChangedArgs<ApplicationDataProvider>(x => x.Current);
-
-        public Repository Current
+        public async Task SaveAsync(RepositorySettings repository)
         {
-            get
-            {
-                return current;
-            }
-
-            set
-            {
-                if (value != current)
-                {
-                    OnPropertyChanged(currentChangedArgs);
-                    current = value;
-                }
-            }
+            await Save<RepositorySettings>(DataContext, DataContext.RepositorySettings, repository);
         }
 
-        #endregion Current
-
-        IRepositoryManager IApplicationDataProvider.ClientStore
+        public async Task SaveChangesAsync()
         {
-            get { return this.ClientStore; }
+            //foreach (var repository in DataContext.ChangeTracker.Entries<Repository>())
+            //{
+            //    if (repository.State != EntityState.Unchanged && repository.Entity.Id == ClientDataContainer.InternalRepositoryId)
+            //    {
+            //        ConfigurationContext.Repositories.Attach(repository.Entity);
+            //        ConfigurationContext.SetState(repository.Entity, repository.State);
+            //    }
+            //}
+
+            await DataContext.SaveChangesAsync();
+            //await ConfigurationContext.SaveChangesAsync();
         }
 
-        public ILocalRepositoryManager ClientStore
-        {
-            get;
-            set;
-        }
+        /* #region Context (application and client) synchronisation
 
-        public void SaveRepository(Repository repository)
-        {
-            var old = DataContext.Repositories.Find(repository.Id);
-            if (old == null)
-            {
-                DataContext.Repositories.Add(repository);
-            }
-            else
-            {
-                DataContext.Repositories.Attach(repository);
-                DataContext.MarkAsModified(repository);
-            }
+         public override void BeginInit()
+         {
+             base.BeginInit();
 
-            globalContext.Value.SaveChanges();
-        }
+             if (ApplicationDataContainer.ConnectionString != null)
+             {
+                 DataContext = ApplicationDataContainer.GetApplicationSettingsDataContext();
+             }
+
+             this.ApplicationDataContainer.ConnectionChanged += ApplicationStore_ConnectionChanged;
+         }
+
+         protected override void CleanClientContextes()
+         {
+             ConfigurationContext.SafeDispose();
+         }
+
+         protected override void GetClientContextes()
+         {
+             ConfigurationContext = ClientDataContainer.GetConfigurationContext();
+         }
+
+         private void ApplicationStore_ConnectionChanged(object sender, System.EventArgs e)
+         {
+             DataContext.SafeDispose();
+
+             if (ApplicationDataContainer.ConnectionString != null)
+             {
+                 DataContext = ApplicationDataContainer.GetApplicationSettingsDataContext();
+             }
+         }
+
+         #endregion Context (application and client) synchronisation*/
     }
 }

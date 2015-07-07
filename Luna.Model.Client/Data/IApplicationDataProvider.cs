@@ -1,19 +1,35 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Luna.Model.Storage;
 
 namespace Luna.Data.Storage
 {
-    public interface IApplicationDataProvider : INotifyPropertyChanged
+    /// <summary>
+    /// Application data provider.
+    /// </summary>
+    public interface IApplicationDataProvider
     {
-        IQueryable<Repository> Repositories { get; }
+        /// <summary>
+        /// Get available repositories (from application cache).
+        /// </summary>
+        IQueryable<RepositorySettings> LocalRepositories { get; }
 
-        IRepositoryManager ApplicationStore { get; }
+        /// <summary>
+        /// Gets available cloud repositories.
+        /// </summary>
+        Task<IEnumerable<Repository>> GetCloudRepositoriesAsync();
 
-        Repository Current { get; set; }
+        /// <summary>
+        /// Saves the repository updates.
+        /// </summary>
+        /// <param name="repository">Repository</param>
+        Task SaveAsync(RepositorySettings repository);
 
-        IRepositoryManager ClientStore { get; }
-
-        void SaveRepository(Repository repository);
+        /// <summary>
+        /// Persists context modifications.
+        /// </summary>
+        /// <returns>Task.</returns>
+        Task SaveChangesAsync();
     }
 }

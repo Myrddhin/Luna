@@ -9,8 +9,10 @@
     xmlns:dxd="http://schemas.devexpress.com/winfx/2008/xaml/docking"
     xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar"
     xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking"
+    xmlns:loki="clr-namespace:Loki.UI.Wpf;assembly=Loki.UI.Wpf"
     x:Class="Luna.UI.Main.MainView"
     Icon="../../Resources/icon.png"
+    dx:ThemeManager.ThemeName="DeepBlue"
     Title="MainWindow" Height="350" Width="525" WindowState="Maximized" WindowStartupLocation="CenterScreen" BorderEffect="Default">
     <Window.Resources>
         <ControlTemplate x:Key="{dxdot:DocumentElementsThemeKey ResourceKey=Template}" TargetType="dxdove:Document">
@@ -45,8 +47,7 @@
                                             ScrollPrevButtonTemplate="{DynamicResource {dxdot:DocumentPaneElementsThemeKey ResourceKey=ScrollPrevButton}}"
                                             ScrollNextButtonTemplate="{DynamicResource {dxdot:DocumentPaneElementsThemeKey ResourceKey=ScrollNextButton}}"
                                             DropDownButtonTemplate="{DynamicResource {dxdot:DocumentPaneElementsThemeKey ResourceKey=DropDownButton}}"
-                                            CloseButtonTemplate="{DynamicResource {dxdot:DocumentPaneElementsThemeKey ResourceKey=CloseButton}}"
-                                            dxdove:TabHeaderControlBoxControl.Location="{Binding CaptionLocation}" />
+                                            CloseButtonTemplate="{DynamicResource {dxdot:DocumentPaneElementsThemeKey ResourceKey=CloseButton}}" />
                         </dxdove:DockingSplitLayoutPanel.Content2>
                     </dxdove:DockingSplitLayoutPanel>
                 </dxdove:DockingSplitLayoutPanel.Content1>
@@ -77,17 +78,20 @@
         <Style TargetType="dxb:BarButtonItem" x:Key="MNI_Style">
             <Setter Property="BarItemDisplayMode" Value="Default" />
             <Style.Triggers>
-                <DataTrigger Binding="{Binding Command.Tag}" Value="Application.Search">
+                <DataTrigger Binding="{Binding Command.Name}" Value="Application.Search">
                     <Setter Property="Glyph" Value="{StaticResource MNI_search}" />
                 </DataTrigger>
-                <DataTrigger Binding="{Binding Command.Tag}" Value="Application.Save">
+                <DataTrigger Binding="{Binding Command.Name}" Value="Application.Save">
                     <Setter Property="Glyph" Value="{StaticResource MNI_save}" />
                 </DataTrigger>
-                <DataTrigger Binding="{Binding Command.Tag}" Value="Application.Refresh">
+                <DataTrigger Binding="{Binding Command.Name}" Value="Application.Refresh">
                     <Setter Property="Glyph" Value="{StaticResource MNI_refresh}" />
                 </DataTrigger>
-                <DataTrigger Binding="{Binding Command.Tag}" Value="Application.Export">
-                    <Setter Property="Glyph" Value="{StaticResource MNI_search}" />
+                <DataTrigger Binding="{Binding Command.Name}" Value="Application.Export">
+                    <Setter Property="Glyph" Value="{StaticResource MNI_export}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Command.Name}" Value="Application.Add">
+                    <Setter Property="Glyph" Value="{StaticResource MNI_add}" />
                 </DataTrigger>
             </Style.Triggers>
         </Style>
@@ -109,7 +113,11 @@
             <Setter Property="lw:Bind.Model" Value="{Binding}" />
         </Style>
     </Window.Resources>
-    <dxb:BarManager>
+    <dxb:BarManager AllowGlyphTheming="True">
+        <dxb:BarManager.Items>
+            <dxb:BarStaticItem x:Name="StatusFileName" Content="{Binding RepositoryName}" Alignment="Near" BarItemDisplayMode="Content" />
+            <dxb:BarStaticItem x:Name="UserName" Content="{Binding UserName}" Alignment="Far" BarItemDisplayMode="Content" />
+        </dxb:BarManager.Items>
         <dxb:BarManager.Bars>
             <dxb:Bar x:Name="mainMenuBar" ItemStyle="{StaticResource MNI_Style}" ItemTemplate="{StaticResource MNI_Template}" Caption="Main Menu" IsMainMenu="True" DataContext="{Binding Menu}" ItemLinksSource="{Binding Items}">
                 <dxb:Bar.DockInfo>
@@ -120,26 +128,28 @@
                 <dxb:Bar.DockInfo>
                     <dxb:BarDockInfo ContainerType="Bottom" />
                 </dxb:Bar.DockInfo>
+                <dxb:BarStaticItemLink BarItemName="StatusFileName" />
+                <dxb:BarStaticItemLink BarItemName="UserName" />
             </dxb:Bar>
         </dxb:BarManager.Bars>
         <Grid Background="Transparent">
-            <dxdo:DockLayoutManager ItemsSource="{Binding Documents.Children}" lw:Bind.Model="{Binding Documents.Children}">
+            <dxdo:DockLayoutManager ItemsSource="{Binding Documents.Children}">
                 <dxd:MVVMHelper.LayoutAdapter>
                     <lw:DocumentItemLayoutAdapter HostingGroupName="DocumentGroup" />
                 </dxd:MVVMHelper.LayoutAdapter>
                 <dxdo:DockLayoutManager.AutoHideGroups>
                     <dxdo:AutoHideGroup DockType="Left">
-                        <dxdo:LayoutPanel Caption="Navigation menu">
+                        <dxdo:LayoutPanel ShowCaption="False" Caption="Navigation" AllowClose="False" AllowDock="True" AllowFloat="False" ItemWidth="200" ShowPinButton="False" ShowCloseButton="False" ShowControlBox="False" ShowMaximizeButton="False">
                             <dxn:NavBarControl ItemsSource="{Binding Navigation.Children}">
                                 <dxn:NavBarControl.View>
-                                    <dxn:NavigationPaneView />
+                                    <dxn:ExplorerBarView />
                                 </dxn:NavBarControl.View>
                             </dxn:NavBarControl>
                         </dxdo:LayoutPanel>
                     </dxdo:AutoHideGroup>
                 </dxdo:DockLayoutManager.AutoHideGroups>
                 <dxdo:LayoutGroup>
-                    <dxdo:DocumentGroup lw:Bind.Model="{Binding Documents}" Name="DocumentGroup" MDIStyle="Tabbed" CaptionLocation="Top" ClosePageButtonShowMode="InActiveTabPageHeader">
+                    <dxdo:DocumentGroup  lw:Bind.Model="{Binding Documents}"  Name="DocumentGroup" DestroyOnClosingChildren="False" CaptionLocation="Top" ClosePageButtonShowMode="InActiveTabPageHeader" MDIStyle="Tabbed">
                         <dxdo:DocumentGroup.ItemStyle>
                             <Style TargetType="{x:Type dxdo:DocumentPanel}">
                                 <Setter Property="lw:Bind.Model" Value="{Binding}" />

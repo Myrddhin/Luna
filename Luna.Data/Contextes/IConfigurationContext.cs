@@ -1,14 +1,10 @@
 ﻿using System.Data.Entity;
-using Luna.Model.Configuration;
+using Luna.Model.Storage;
 
 namespace Luna.Data.Local.Configuration
 {
-    public interface IConfigurationContext
+    public interface IConfigurationContext : IDataContext
     {
-        IDbSet<ProviderConfiguration> Providers { get; }
-
-        void MarkAsModified<T>(T repository) where T : class;
-
-        void SaveChanges();
+        DbSet<Repository> Repositories { get; }
     }
 }

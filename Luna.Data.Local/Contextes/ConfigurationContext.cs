@@ -1,23 +1,24 @@
 ﻿using System.Data.Entity;
 using Luna.Data.Local.Configuration;
 using Luna.Data.Local.SQLite.TablesConfiguration;
-using Luna.Model.Configuration;
+using Luna.Data.Local.Storage;
+using Luna.Model.Storage;
 
 namespace Luna.Data.Local.SQLite
 {
     internal class ConfigurationContext : SQLiteContext<ConfigurationContext>, IConfigurationContext
     {
-        public ConfigurationContext(string connectionString)
-            : base(connectionString)
+        public ConfigurationContext(IRepositoryDataContainer dataContainer)
+            : base(dataContainer.ConnectionString)
         {
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Configurations.Add(new ProviderConfigurationConfiguration());
+            modelBuilder.Configurations.Add(new RepositoryConfiguration());
         }
 
-        public virtual IDbSet<ProviderConfiguration> Providers { get; set; }
+        public virtual DbSet<Repository> Repositories { get; set; }
     }
 }

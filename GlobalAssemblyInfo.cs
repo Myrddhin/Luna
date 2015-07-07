@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCulture("")]
 [assembly: AssemblyVersion("0.0.0.4")]
 [assembly: AssemblyFileVersion("0.0.0.0")]
-[assembly: CLSCompliant(true)]
+[assembly: CLSCompliant(false)]
 [assembly: NeutralResourcesLanguage("fr-FR")]
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]

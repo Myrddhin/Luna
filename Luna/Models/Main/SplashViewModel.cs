@@ -6,7 +6,7 @@ namespace Luna.UI.Main
 {
     public class SplashViewModel : Screen, ISplashViewModel
     {
-        public IApplicationConfiguration Application { get; set; }
+        public IApplicationInstallService Installer { get; set; }
 
         public SplashViewModel()
         {
@@ -15,23 +15,21 @@ namespace Luna.UI.Main
 
         public async Task ApplicationInitialize()
         {
-            await Task.Factory.StartNew(() =>
+            switch (Installer.ApplicationStatus)
             {
-                switch (Application.ApplicationStatus)
-                {
-                    case Luna.Model.Storage.RepositoryStatus.NeedUpgrade:
-                        Application.Upgrade();
-                        break;
+                case Luna.Model.Storage.RepositoryStatus.NeedUpgrade:
+                    await Installer.UpgradeAsync();
+                    break;
 
-                    case Luna.Model.Storage.RepositoryStatus.New:
-                        Application.Install();
-                        break;
+                case Luna.Model.Storage.RepositoryStatus.New:
+                    await Installer.InstallAsync();
+                    break;
 
-                    case Luna.Model.Storage.RepositoryStatus.OK:
-                    default:
-                        break;
-                }
-            });
+                case Luna.Model.Storage.RepositoryStatus.OK:
+                default:
+                    await Task.Yield();
+                    break;
+            }
         }
     }
 }

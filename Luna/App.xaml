@@ -1,7 +1,9 @@
 ﻿<Application x:Class="Luna.UI.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Luna.UI">
+             xmlns:local="clr-namespace:Luna.UI"
+             xmlns:lc="clr-namespace:Loki.UI.Wpf.Converters;assembly=Loki.UI.Wpf"
+             xmlns:lunac="clr-namespace:Luna.UI.Converters">
     <Application.Resources>
         <ResourceDictionary>
             <BitmapImage UriSource="pack://application:,,,/Luna.UI;component/Resources/back.jpeg" x:Key="IMG_Splash" />
@@ -9,10 +11,16 @@
             <BitmapImage UriSource="pack://application:,,,/Luna.UI;component/Resources/mni_refresh.png" x:Key="MNI_refresh" />
             <BitmapImage UriSource="pack://application:,,,/Luna.UI;component/Resources/mni_save.png" x:Key="MNI_save" />
             <BitmapImage UriSource="pack://application:,,,/Luna.UI;component/Resources/mni_export.png" x:Key="MNI_export" />
+            <BitmapImage UriSource="pack://application:,,,/Luna.UI;component/Resources/mni_add.png" x:Key="MNI_add" />
+            <lunac:PhoneNumberConverter x:Key="PhoneConverter" />
+            <lunac:NotNullToVisibilityConverter x:Key="HideIfNullConverter" TrueValue="Visible" FalseValue="Collapsed" />
+            <lc:BoolToVisibilityConverter x:Key="TrueToVisibleConverter" TrueValue="Visible" FalseValue="Hidden" />
+            <lc:BoolToVisibilityConverter x:Key="FalseToVisibleConverter" TrueValue="Hidden" FalseValue="Visible" />
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary>
                     <local:LunaBootstrapper x:Key="bootstrapper" />
                 </ResourceDictionary>
+                <ResourceDictionary Source="Generic.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

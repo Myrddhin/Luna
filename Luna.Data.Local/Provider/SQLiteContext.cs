@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using System.Threading;
+using System.Threading.Tasks;
 using Loki.Common;
 
 namespace Luna.Data.Local.SQLite
@@ -57,16 +58,19 @@ namespace Luna.Data.Local.SQLite
         {
             Database.SetInitializer<TContext>(null);
             Database.Log = Log.Debug;
+
+            // Database.Log = Console.WriteLine;
         }
 
-        public new void SaveChanges()
+        public new async Task SaveChangesAsync()
         {
-            base.SaveChanges();
+            Log.Debug("Saving changes");
+            await base.SaveChangesAsync();
         }
 
-        public virtual void MarkAsModified<T>(T entity) where T : class
+        public virtual void SetState(object entity, EntityState state)
         {
-            this.Entry(entity).State = EntityState.Modified;
+            this.Entry(entity).State = state;
         }
     }
 }

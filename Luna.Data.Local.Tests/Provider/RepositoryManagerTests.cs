@@ -3,6 +3,7 @@ using System.Data.SQLite;
 using System.IO;
 using System.Linq;
 using Loki.Common;
+using Luna.Data.Local.Storage;
 using Xunit;
 
 namespace Luna.Data.Local.SQLite.Tests
@@ -15,7 +16,7 @@ namespace Luna.Data.Local.SQLite.Tests
             manager = new GlobalRepositoryManager();
         }
 
-        private GlobalRepositoryManager manager;
+        public IApplicationDataContainer manager;
 
         [Fact]
         public void CreateTest()
@@ -29,9 +30,9 @@ namespace Luna.Data.Local.SQLite.Tests
 
             Assert.True(manager.SchemaVersion == 1);
 
-            var context = manager.GetApplicationDataContext();
+            var context = manager.GetApplicationSettingsDataContext();
 
-            Assert.True(context.Repositories.Count() == 0);
+            Assert.True(context.RepositorySettings.Count() == 0);
         }
 
         private void ValidateConnection()

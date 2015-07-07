@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
-using Loki.Common;
 
 namespace Luna.Data.Local.SQLite.Updates
 {
@@ -13,12 +12,11 @@ namespace Luna.Data.Local.SQLite.Updates
 
         public void Upgrade(string connectionString)
         {
-            using (var connection = new SQLiteConnection(connectionString))
+            using (var connection = SQLiteConnectionFactory.Create(connectionString, true))
             {
                 SQLiteTransaction transaction = null;
                 try
                 {
-                    connection.Open();
                     transaction = connection.BeginTransaction();
 
                     foreach (var commandText in GetUpgradeScripts())
@@ -49,12 +47,11 @@ namespace Luna.Data.Local.SQLite.Updates
 
         public void Downgrade(string connectionString)
         {
-            using (var connection = new SQLiteConnection(connectionString))
+            using (var connection = SQLiteConnectionFactory.Create(connectionString, true))
             {
                 SQLiteTransaction transaction = null;
                 try
                 {
-                    connection.Open();
                     transaction = connection.BeginTransaction();
 
                     foreach (var commandText in GetDowngradeScripts())

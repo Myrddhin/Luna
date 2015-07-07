@@ -1,0 +1,135 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxt="clr-namespace:DevExpress.Xpf.Utils.Themes;assembly=DevExpress.Xpf.Core.v15.1"
+    xmlns:dxte="http://schemas.devexpress.com/winfx/2008/xaml/docking/themekeys"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/scheduler"
+    x:Class="Luna.UI.CRM.ContactEditView"
+    mc:Ignorable="d" d:DesignHeight="600" d:DesignWidth="1200">
+    <dxlc:LayoutControl Header="Header" Orientation="Vertical" Margin="0,0,0,0">
+        <dxlc:LayoutGroup x:Name="title" MouseLeftButtonUp="StartEdit" HorizontalAlignment="Left">
+            <dxlc:LayoutItem MinWidth="200">
+                <Border CornerRadius="2" Background="#DDB1CEF3" Padding="5">
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <TextBlock Text="{Binding FullName}" FontSize="14" FontWeight="Bold" FontStyle="Italic" />
+                    </StackPanel>
+                </Border>
+            </dxlc:LayoutItem>
+            <dxe:FlyoutControl HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="titleEdit" PlacementTarget="{Binding ElementName=title}" UseLayoutRounding="True" AnimationDuration="0">
+                <dxe:FlyoutControl.Settings>
+                    <dxe:FlyInSettings />
+                </dxe:FlyoutControl.Settings>
+                <dxlc:LayoutControl Orientation="Vertical">
+                    <dxlc:LayoutItem Label="Titre" LabelPosition="Top">
+                        <dxe:TextEdit MinWidth="200" EditValue="{Binding Title}" />
+                    </dxlc:LayoutItem>
+                    <dxlc:LayoutItem IsRequired="True" Label="Nom" LabelPosition="Top">
+                        <dxe:TextEdit MinWidth="200" EditValue="{Binding Name}" />
+                    </dxlc:LayoutItem>
+                    <dxlc:LayoutItem Label="Prénom" LabelPosition="Top">
+                        <dxe:TextEdit MinWidth="200" EditValue="{Binding Surname}" />
+                    </dxlc:LayoutItem>
+                </dxlc:LayoutControl>
+            </dxe:FlyoutControl>
+        </dxlc:LayoutGroup>
+        <dxlc:LayoutGroup VerticalAlignment="Stretch">
+            <dxlc:LayoutGroup Header="Téléphones" x:Name="phones" Orientation="Vertical" View="GroupBox" MouseLeftButtonUp="StartEdit" VerticalAlignment="Stretch">
+                <dxlc:LayoutItem Label="Fixe">
+                    <TextBlock Text="{Binding Phone, Converter={StaticResource PhoneConverter}}" />
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Fixe 2" Visibility="{Binding PhoneSecondary, Converter={StaticResource HideIfNullConverter}}">
+                    <TextBlock Text="{Binding PhoneSecondary, Converter={StaticResource PhoneConverter}}" />
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Portable">
+                    <TextBlock Text="{Binding Mobile, Converter={StaticResource PhoneConverter}}" />
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Portable 2" Visibility="{Binding MobileSecondary, Converter={StaticResource HideIfNullConverter}}">
+                    <TextBlock Text="{Binding MobileSecondary, Converter={StaticResource PhoneConverter}}" />
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="Fax" VerticalContentAlignment="Stretch">
+                    <TextBlock Text="{Binding Fax, Converter={StaticResource PhoneConverter}}" />
+                </dxlc:LayoutItem>
+                <dxe:FlyoutControl HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="phonesEdit" PlacementTarget="{Binding ElementName=phones}" UseLayoutRounding="True">
+                    <dxe:FlyoutControl.Settings>
+                        <dxe:FlyInSettings />
+                    </dxe:FlyoutControl.Settings>
+                    <dxlc:LayoutControl Orientation="Vertical">
+                        <dxlc:LayoutItem Label="Fixe" LabelPosition="Top">
+                            <dxe:TextEdit MinWidth="200" EditValue="{Binding Phone, Converter={StaticResource PhoneConverter}}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Fixe 2" LabelPosition="Top">
+                            <dxe:TextEdit MinWidth="200" EditValue="{Binding PhoneSecondary, Converter={StaticResource PhoneConverter}}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Portable" LabelPosition="Top" Visibility="Hidden">
+                            <dxe:TextEdit MinWidth="200" EditValue="{Binding Mobile, Converter={StaticResource PhoneConverter}}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Portable 2" LabelPosition="Top">
+                            <dxe:TextEdit MinWidth="200" EditValue="{Binding MobileSecondary, Converter={StaticResource PhoneConverter}}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Fax" LabelPosition="Top">
+                            <dxe:TextEdit MinWidth="200" EditValue="{Binding Fax, Converter={StaticResource PhoneConverter}}" />
+                        </dxlc:LayoutItem>
+                    </dxlc:LayoutControl>
+                </dxe:FlyoutControl>
+            </dxlc:LayoutGroup>
+            <dxlc:LayoutGroup Header="Adresse" x:Name="adress" Orientation="Vertical" View="GroupBox" MouseLeftButtonUp="StartEdit" VerticalAlignment="Stretch">
+                <dxlc:LayoutItem VerticalContentAlignment="Stretch">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="{Binding Address}" />
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding ZipCode}" Margin="3,0" />
+                            <TextBlock Text="{Binding City}" Margin="3,0" />
+                            <TextBlock Text="{Binding Country}" />
+                        </StackPanel>
+                    </StackPanel>
+                </dxlc:LayoutItem>
+                <dxe:FlyoutControl HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="addressEdit" AnimationDuration="0" PlacementTarget="{Binding ElementName=adress}" UseLayoutRounding="True">
+                    <dxe:FlyoutControl.Settings>
+                        <dxe:FlyInSettings />
+                    </dxe:FlyoutControl.Settings>
+                    <dxlc:LayoutControl Orientation="Vertical">
+                        <dxlc:LayoutItem Label="Adresse" LabelPosition="Top">
+                            <dxe:TextEdit MinWidth="400" EditValue="{Binding Adrress}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Code  postal" LabelPosition="Top">
+                            <dxe:TextEdit MinWidth="200" EditValue="{Binding ZipCode}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Ville" LabelPosition="Top">
+                            <dxe:TextEdit MinWidth="200" EditValue="{Binding City}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Pays" LabelPosition="Top">
+                            <dxe:TextEdit MinWidth="200" EditValue="{Binding Country}" />
+                        </dxlc:LayoutItem>
+                    </dxlc:LayoutControl>
+                </dxe:FlyoutControl>
+            </dxlc:LayoutGroup>
+            <dxlc:LayoutGroup Header="Tags" Orientation="Vertical" View="GroupBox" VerticalAlignment="Stretch">
+                <dxlc:LayoutItem VerticalContentAlignment="Stretch" VerticalAlignment="Stretch">
+                    <dxe:ComboBoxEdit AllowDefaultButton="False"
+                                  ValidateOnTextInput="True"
+                                  ItemsSource="{Binding AvailableTags}"
+                                  EditValue="{Binding SelectedTags}"
+                                  ValidateOnEnterKeyPressed="True">
+                        <dxe:ComboBoxEdit.StyleSettings>
+                            <dxe:TokenComboBoxStyleSettings NewTokenPosition="Far" EnableTokenWrapping="True" />
+                        </dxe:ComboBoxEdit.StyleSettings>
+                    </dxe:ComboBoxEdit>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+        </dxlc:LayoutGroup>
+        <dxlc:LayoutGroup Orientation="Horizontal" View="GroupBox" VerticalAlignment="Stretch">
+
+            <dxlc:LayoutItem Label="E-Mail">
+                <dxe:TextEdit MaskType="RegEx" Mask="[a-z0-9._%-]+@[a-z0-9.-]+\.[a-z]{2,4}" />
+            </dxlc:LayoutItem>
+            <dxlc:LayoutItem Label="E-Mail 2">
+                <dxe:TextEdit MaskType="RegEx" Mask="[a-z0-9._%-]+@[a-z0-9.-]+\.[a-z]{2,4}" />
+            </dxlc:LayoutItem>
+        </dxlc:LayoutGroup>
+    </dxlc:LayoutControl>
+</UserControl>

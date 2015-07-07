@@ -7,7 +7,7 @@
     <ProjectGuid>{95C5F331-5B9D-4090-B211-704478525297}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Luna.Model.Client</RootNamespace>
+    <RootNamespace>Luna.Model</RootNamespace>
     <AssemblyName>Luna.Model.Client</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -45,18 +45,51 @@
     <Compile Include="..\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Configuration\IApplicationConfiguration.cs" />
-    <Compile Include="Configuration\IRepositoryConfiguration.cs" />
-    <Compile Include="Configuration\ProviderConfiguration.cs" />
+    <Compile Include="Configuration\IApplicationState.cs" />
+    <Compile Include="Configuration\IRepositoryManagerService.cs" />
+    <Compile Include="Configuration\IApplicationInstallService.cs" />
+    <Compile Include="Configuration\IRepositoryConfigurationService.cs" />
+    <Compile Include="Configuration\IRepositoryParameters.cs" />
+    <Compile Include="Configuration\ApplicationParameter.cs" />
+    <Compile Include="Configuration\IRepositoryStore.cs" />
+    <Compile Include="Configuration\ParameterType.cs" />
+    <Compile Include="Configuration\ExternalAccount.cs" />
     <Compile Include="Configuration\ProviderTypes.cs" />
+    <Compile Include="Messages\NetworkErrorMessage.cs" />
+    <Compile Include="Messages\RepositorySaveMessage.cs" />
+    <Compile Include="CRM\Address.cs" />
+    <Compile Include="CRM\Contact.cs" />
+    <Compile Include="CRM\ICRMDataProvider.cs" />
+    <Compile Include="CRM\Tag.cs" />
     <Compile Include="Data\IApplicationDataProvider.cs" />
-    <Compile Include="Data\IRepositoryManager.cs" />
-    <Compile Include="Data\Repository.cs" />
+    <Compile Include="Data\IConfigurationDataProvider.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Data\IDataContainer.cs" />
+    <Compile Include="Storage\Repository.cs" />
+    <Compile Include="Storage\RepositoryBase.cs" />
     <Compile Include="Data\RepositoryStatus.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="IModule.cs" />
+    <Compile Include="IO\DataConverterLog.cs" />
+    <Compile Include="IO\IDataConverterFactory.cs" />
+    <Compile Include="IO\IDataConverterModule.cs" />
+    <Compile Include="IO\IDataConverterService.cs" />
+    <Compile Include="IO\IOMode.cs" />
+    <Compile Include="IO\LogType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service.cs" />
+    <Compile Include="Storage\RepositorySettings.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Loki.Core, Version=2.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\thirdparties\Loki\Loki.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Settings\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\Common.targets" />
