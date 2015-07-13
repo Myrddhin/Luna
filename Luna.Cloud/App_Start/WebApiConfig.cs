@@ -11,6 +11,7 @@ namespace Luna.Cloud
         {
             // Web API configuration and services
             // config.Filters.Add(new AuthorizeAttribute());
+            config.EnableSystemDiagnosticsTracing();
 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -18,17 +19,19 @@ namespace Luna.Cloud
             // Api root for global controller.
             config.Routes.MapHttpRoute(
                 name: "RepositoryRoot",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-
-            );
+                routeTemplate: "api/repositories/{id}",
+                defaults: new { id = RouteParameter.Optional, controller = "repositories" });
 
             // Api root for repository dependant controllers.
             config.Routes.MapHttpRoute(
-                name: "CrmRoute",
+                name: "EntityRoute",
                 routeTemplate: "api/repository/{repositoryId}/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-                );
+                defaults: new { id = RouteParameter.Optional });
+
+            config.Routes.MapHttpRoute(
+                name: "LastModifiedRoute",
+                routeTemplate: "api/repository/{repositoryId}/{controller}/lastmodified",
+                defaults: new { action = "lastmodified" });
 
             // IoC Activator
             config.Services.Replace(typeof(IHttpControllerActivator), new IoCControllerActivator(context));

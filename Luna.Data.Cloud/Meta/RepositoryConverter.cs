@@ -1,11 +1,11 @@
 ﻿using Luna.Model.Storage;
-using Meta = Luna.Model.Cloud.Meta;
+using CloudModel = Luna.Model.Cloud.Meta;
 
-namespace Luna.Data.Cloud
+namespace Luna.Data.Cloud.Meta
 {
-    public class RepositoryConverter : CloudConverter<Repository, Meta.Repository>
+    public class RepositoryConverter : CloudConverter<Repository, CloudModel.Repository>
     {
-        public override Repository FromCloud(Meta.Repository cloudItem)
+        public override Repository FromCloud(CloudModel.Repository cloudItem)
         {
             var local = new Repository();
             local.LastUpdate = cloudItem.LastUpdate;
@@ -18,9 +18,9 @@ namespace Luna.Data.Cloud
             return local;
         }
 
-        public override Meta.Repository ToCloud(Repository localItem)
+        public override CloudModel.Repository ToCloud(Repository localItem)
         {
-            var remote = new Meta.Repository();
+            var remote = new CloudModel.Repository();
             remote.Name = localItem.Name;
             remote.SchemaVersion = localItem.SchemaVersion;
             remote.Parameters = localItem.Parameters;

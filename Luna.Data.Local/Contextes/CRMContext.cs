@@ -1,14 +1,15 @@
 ﻿using System.Data.Entity;
 using Luna.Data.Local.CRM;
 using Luna.Data.Local.SQLite.TablesConfiguration;
+using Luna.Data.Local.Storage;
 using Luna.Model.CRM;
 
 namespace Luna.Data.Local.SQLite
 {
     internal class CRMContext : SQLiteContext<CRMContext>, ICRMDataContext
     {
-        public CRMContext(string connectionString)
-            : base(connectionString)
+        public CRMContext(IRepositoryDataContainer dataContainer)
+            : base(dataContainer.ConnectionString)
         {
         }
 

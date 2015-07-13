@@ -182,9 +182,10 @@ namespace Luna.UI.Main
                 else
                 {
                     Information("Aucune base de donnée disponible.");
+                    SelectedItem = null;
                 }
             }
-            else
+            else if (SelectedItem != null)
             {
                 this.TryClose(true);
             }

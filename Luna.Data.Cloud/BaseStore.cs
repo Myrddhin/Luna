@@ -43,5 +43,10 @@ namespace Luna.Data.Cloud
 
             return result != null ? converter.FromCloud(result) : default(TClient);
         }
+
+        protected async Task<TScalar> GetScalarFromCloud<TScalar>(HttpRequestMessage message)
+        {
+            return await ExecuteRequestAsync<TScalar>(message, default(TScalar));
+        }
     }
 }

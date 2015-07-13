@@ -14,23 +14,43 @@ namespace Luna.Cloud.Controllers
         public CRMContext DataContext { get; set; }
 
         // GET: api/Repositories
-        [ResponseType(typeof(Tag[]))]
-        public async Task<IHttpActionResult> Get(Guid repositoryId)
+        //[ResponseType(typeof(Tag[]))]
+        //public async Task<IHttpActionResult> GetAll(Guid repositoryId)
+        //{
+        //    if (ValidateRepository(repositoryId))
+        //    {
+        //        return Ok(await DataContext.Tags.Where(x => x.RepositoryId == repositoryId).ToListAsync());
+        //    }
+
+        //    return NotFound();
+        //}
+
+        [ResponseType(typeof(DateTime))]
+        public async Task<IHttpActionResult> GetLastModified(Guid repositoryId)
         {
             if (ValidateRepository(repositoryId))
             {
-                return Ok(await DataContext.Tags.Where(x => x.RepositoryId == repositoryId).ToListAsync());
+                if (await DataContext.Tags.Where(x => x.RepositoryId == repositoryId).AnyAsync())
+                {
+                    return this.Ok(await DataContext.Tags.Where(x => x.RepositoryId == repositoryId).MaxAsync(x => x.LastUpdate));
+                }
+                else
+                {
+                    return this.Ok(DateTime.MinValue);
+                }
             }
-
-            return NotFound();
+            else
+            {
+                return this.NotFound();
+            }
         }
 
         [ResponseType(typeof(Tag[]))]
-        public async Task<IHttpActionResult> Get(Guid repositoryId, DateTime lastModified)
+        public async Task<IHttpActionResult> Get(Guid repositoryId, [FromUri] DateTime date)
         {
             if (ValidateRepository(repositoryId))
             {
-                return Ok(await DataContext.Tags.Where(x => x.RepositoryId == repositoryId && x.LastUpdate > lastModified).ToListAsync());
+                return Ok(await DataContext.Tags.Where(x => x.RepositoryId == repositoryId && x.LastUpdate > date).ToListAsync());
             }
 
             return NotFound();

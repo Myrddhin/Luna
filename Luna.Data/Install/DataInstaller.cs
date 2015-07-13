@@ -1,5 +1,7 @@
 ﻿using Loki.IoC;
 using Loki.IoC.Registration;
+
+using Luna.Data.CRM;
 using Luna.Data.Storage;
 
 namespace Luna.Data
@@ -10,7 +12,7 @@ namespace Luna.Data
         {
             context.Register(Element.For<IApplicationDataProvider>().ImplementedBy<ApplicationDataProvider>().Lifestyle.Transient);
             context.Register(Element.For<IConfigurationDataProvider>().ImplementedBy<ConfigurationDataProvider>().Lifestyle.Transient);
-            // context.Register(Element.For<ICRMDataProvider>().ImplementedBy<CRMDataProvider>().Lifestyle.Transient);
+            context.Register(Element.For<ICRMDataProvider>().ImplementedBy<CRMDataProvider>().Lifestyle.Transient);
         }
 
         private static Installer all = new Installer();

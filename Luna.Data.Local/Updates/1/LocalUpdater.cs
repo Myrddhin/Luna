@@ -75,10 +75,13 @@ CREATE TABLE `Contacts` (
 ");
             buffer.Enqueue(@"
 CREATE TABLE `Tags` (
-    `Id`	GUID NOT NULL,
-    `name`	TEXT NOT NULL,
-    `color`	TEXT,
-    PRIMARY KEY(id)
+    `id_tag` GUID NOT NULL,
+    `id_repository` GUID NOT NULL,
+    `name` TEXT NOT NULL,
+    `color` TEXT NULL,
+    `last_update` DATE NOT NULL,
+    `version` GUID NOT NULL,
+    PRIMARY KEY(id_tag)
 );
 ");
             buffer.Enqueue(@"

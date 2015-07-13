@@ -13,7 +13,7 @@ namespace Luna.Cloud.Controllers
     {
         // GET: api/Repositories
         [ResponseType(typeof(IEnumerable<Repository>))]
-        public async Task<IHttpActionResult> Get()
+        public async Task<IHttpActionResult> GetAll()
         {
             var result = await AvailableRepositories.ToListAsync();
             if (result.Any())
@@ -41,7 +41,7 @@ namespace Luna.Cloud.Controllers
 
         // GET: api/Repositories/5
         [ResponseType(typeof(IEnumerable<Repository>))]
-        public async Task<IHttpActionResult> Get(DateTime date)
+        public async Task<IHttpActionResult> GetLast(DateTime date)
         {
             return Ok(await AvailableRepositories.Where(x => x.LastUpdate > date).ToListAsync());
         }   /*

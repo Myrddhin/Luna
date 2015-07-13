@@ -1,6 +1,7 @@
 ﻿using Loki.IoC;
 using Loki.IoC.Registration;
 using Luna.Data.Local.Configuration;
+using Luna.Data.Local.CRM;
 using Luna.Data.Local.Storage;
 
 namespace Luna.Data.Local.SQLite
@@ -14,6 +15,7 @@ namespace Luna.Data.Local.SQLite
 
             context.Register(Element.For<IApplicationSettingsDataContext>().ImplementedBy<UserSettingsDataContext>());
             context.Register(Element.For<IConfigurationContext>().ImplementedBy<ConfigurationContext>());
+            context.Register(Element.For<ICRMDataContext>().ImplementedBy<CRMContext>());
         }
 
         private static Installer all = new Installer();

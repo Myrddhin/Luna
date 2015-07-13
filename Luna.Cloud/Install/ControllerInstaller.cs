@@ -11,10 +11,10 @@ namespace Luna.Cloud.Install
             base.Install(context);
 
             // Subscription
-            context.Register(Element.For<RepositoriesController>().Lifestyle.PerRequest);
+            context.Register(Element.For<RepositoriesController>().Lifestyle.Transient);
 
             // CRM
-            context.Register(Element.For<TagsController>().Lifestyle.PerRequest);
+            context.Register(Element.For<TagsController>().Lifestyle.Transient);
         }
     }
 }

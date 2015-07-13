@@ -7,7 +7,7 @@ using Luna.Model.Storage;
 using Luna.Services.Configuration;
 using Remote = Luna.Model.Cloud.Meta;
 
-namespace Luna.Data.Cloud.Azure
+namespace Luna.Data.Cloud.Meta
 {
     public class RepositoryStore : BaseStore<Repository, Remote.Repository>, IRepositoryStore
     {

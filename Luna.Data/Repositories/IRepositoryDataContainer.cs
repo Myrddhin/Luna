@@ -10,12 +10,6 @@ namespace Luna.Data.Local.Storage
     public interface IRepositoryDataContainer : IDataContainer
     {
         /// <summary>
-        /// Gets the CRM data context.
-        /// </summary>
-        /// <returns></returns>
-        ICRMDataContext GetCRMContext();
-
-        /// <summary>
         /// Gets the internal repository id.
         /// </summary>
         Guid InternalRepositoryId { get; }

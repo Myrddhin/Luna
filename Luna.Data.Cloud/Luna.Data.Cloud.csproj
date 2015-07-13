@@ -45,6 +45,8 @@
     <Compile Include="AzureRequester.cs" />
     <Compile Include="BaseStore.cs" />
     <Compile Include="CloudConverter.cs" />
+    <Compile Include="CRM\TagConverter.cs" />
+    <Compile Include="CRM\TagStore.cs" />
     <Compile Include="Install\Installer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Meta\RepositoryConverter.cs" />
@@ -97,9 +99,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CRM\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="schema.sql" />
   </ItemGroup>

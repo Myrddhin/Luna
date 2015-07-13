@@ -10,6 +10,8 @@ namespace Luna.Data.CRM
 
         IQueryable<Tag> Tags { get; }
 
+        Task EnsureCloudRefresh();
+
         Task SaveAsync(Contact contact);
 
         Task SaveAsync(Tag tag);

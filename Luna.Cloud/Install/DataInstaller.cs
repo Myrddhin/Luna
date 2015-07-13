@@ -10,8 +10,8 @@ namespace Luna.Cloud.Install
         public override void Install(IObjectContext context)
         {
             base.Install(context);
-            context.Register(Element.For<MetaDataContext>().Lifestyle.PerRequest);
-            context.Register(Element.For<CRMContext>().Lifestyle.PerRequest);
+            context.Register(Element.For<MetaDataContext>().Lifestyle.Transient);
+            context.Register(Element.For<CRMContext>().Lifestyle.Transient);
         }
     }
 }

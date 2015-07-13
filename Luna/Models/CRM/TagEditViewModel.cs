@@ -5,8 +5,11 @@ using System.Threading.Tasks;
 using Loki.Commands;
 using Loki.Common;
 using Loki.UI;
+using Loki.UI.Tasks;
+
 using Luna.Data.CRM;
 using Luna.Model.CRM;
+using Luna.Model.Storage;
 
 namespace Luna.UI.CRM
 {
@@ -30,6 +33,8 @@ namespace Luna.UI.CRM
             Tags = new BindableCollection<Tag>();
         }
 
+        private ITaskConfiguration<object, IEnumerable<Tag>> cloudGetter;
+
         public BindableCollection<Tag> Tags { get; private set; }
 
         protected override void OnInitialize()
@@ -40,18 +45,25 @@ namespace Luna.UI.CRM
 
             Commands.Handle(LunaCommands.Add, Command_Add_Execute);
             Commands.Handle(TestCommand, TestCommand_CanExecute, TestCommand_Execute);
+
+            cloudGetter = CreateWorker<object, IEnumerable<Tag>>("Chargement", CloudGetter_DoWork);
         }
 
-        protected override void OnLoad()
+        protected async override void OnLoad()
         {
-            Tags.Clear();
-            Tags.AddRange(DataProvider.Tags);
-            Tags.Add(new Tag() { Name = "New Tag" });
-            Tags.Add(new Tag() { Name = "New Tag 2" });
+            var tags = await cloudGetter.DoWorkAsync(null);
 
-            Task.Delay(5000);
+            Tags.Clear();
+            Tags.AddRange(tags);
 
             base.OnLoad();
+        }
+
+        private async Task<IEnumerable<Tag>> CloudGetter_DoWork(object o)
+        {
+            await DataProvider.EnsureCloudRefresh();
+            await Task.Delay(5000);
+            return DataProvider.Tags;
         }
 
         private void Command_Add_Execute(object sender, CommandEventArgs e)

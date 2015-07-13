@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using Luna.Data.Local.CRM;
 using Luna.Data.Local.Storage;
 using NewMoon = Luna.Data.Local.SQLite.Updates.NewMoon;
 
@@ -12,11 +11,6 @@ namespace Luna.Data.Local.SQLite
         {
             RegisterUpdater<NewMoon.LocalUpdater>();
             DefaultResourceName = "Luna.Data.Local.repository.db3";
-        }
-
-        public ICRMDataContext GetCRMContext()
-        {
-            return new CRMContext(ConnectionString);
         }
 
         public Guid InternalRepositoryId

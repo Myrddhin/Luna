@@ -55,13 +55,13 @@ namespace Luna.Data.Cloud
 
         public async Task<HttpResponseMessage> Send(HttpRequestMessage message)
         {
-            AuthenticationContext ac = new AuthenticationContext(ADUrl, TokenCache);
-            AuthenticationResult ar = ac.AcquireToken(ApiUri, LunaID, new Uri(LunaReturnUrl));
+            //AuthenticationContext ac = new AuthenticationContext(ADUrl, TokenCache);
+            //AuthenticationResult ar = ac.AcquireToken(ApiUri, LunaID, new Uri(LunaReturnUrl));
 
             // Call Web API
-            string authHeader = ar.CreateAuthorizationHeader();
+            //string authHeader = ar.CreateAuthorizationHeader();
 
-            message.Headers.TryAddWithoutValidation("Authorization", authHeader);
+            //message.Headers.TryAddWithoutValidation("Authorization", authHeader);
             return await client.SendAsync(message);
         }
 
