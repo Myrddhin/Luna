@@ -66,9 +66,17 @@
     <Reference Include="Loki.Core">
       <HintPath>..\..\thirdparties\Loki\Loki.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Azure.AppService.ApiApps.Service, Version=0.9.16.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\thirdparties\Microsoft.Azure.AppService.ApiApps.Service.0.9.16\lib\net45\Microsoft.Azure.AppService.ApiApps.Service.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\thirdparties\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\..\thirdparties\Swashbuckle.Core.5.0.0\lib\net40\Swashbuckle.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -115,6 +123,10 @@
       <Private>True</Private>
       <HintPath>..\..\thirdparties\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\..\thirdparties\WebActivatorEx.2.0.6\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Owin">
@@ -144,11 +156,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\Subscription\RepositoriesController.cs" />
     <Compile Include="Controllers\CRM\TagsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Data\CRM\CRMContext.cs" />
+    <Compile Include="Data\CRM\TagTableConfiguration.cs" />
     <Compile Include="Data\Meta\RepositoryTableConfiguration.cs" />
     <Compile Include="Data\Meta\MetaDataContext.cs" />
     <Compile Include="Data\Meta\SubscriptionTableConfiguration.cs" />
@@ -163,7 +178,8 @@
     <Compile Include="IoC\DefaultInstaller.cs" />
     <Compile Include="IoC\IoCControllerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="RepositorySerializer.cs" />
+    <Content Include="Metadata\deploymentTemplates\apiappconfig.azureresource.json" />
+    <Content Include="apiapp.json" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -184,9 +200,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\CRM\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Luna.Model.Cloud\Luna.Model.Cloud.csproj">
       <Project>{2195a73c-95bd-4eb7-893f-d44c65ab3347}</Project>

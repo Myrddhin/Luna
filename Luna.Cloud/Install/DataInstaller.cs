@@ -1,5 +1,6 @@
 ﻿using Loki.IoC;
 using Loki.IoC.Registration;
+using Luna.Cloud.Data.CRM;
 using Luna.Cloud.Data.Meta;
 
 namespace Luna.Cloud.Install
@@ -10,6 +11,7 @@ namespace Luna.Cloud.Install
         {
             base.Install(context);
             context.Register(Element.For<MetaDataContext>().Lifestyle.PerRequest);
+            context.Register(Element.For<CRMContext>().Lifestyle.PerRequest);
         }
     }
 }
