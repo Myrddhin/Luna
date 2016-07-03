@@ -1,0 +1,170 @@
+﻿<CRM:TagEditViewModel xmlns:CRM="clr-namespace:Luna.UI.CRM" xmlns:CRM1="clr-namespace:Luna.Model.CRM;assembly=Luna.Model.Client" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:Commands="clr-namespace:Loki.Commands;assembly=Loki.Core" Color="Interdum himenaeos imperdiet rutrum" DisplayName="Leo porttitor parturient" IsChanged="True" IsLoaded="True" IsInitialized="False" IsBusy="False" IsActive="True" Name="Nulla adipiscing" Status="Proin hac arcu malesuada penatibus" Tracking="False">
+	<CRM:TagEditViewModel.Current>
+		<CRM1:Tag Color="Praesent aliquam cras integer duis" LastUpdate="07/30/2015 13:39:11" Name="Maecenas class">
+			<CRM1:Tag.Contacts>
+				<CRM1:Contact Comments="Pharetra proin himenaeos dictum" Description="Nascetur nisi hac" Email="Dictumst lorem eleifend congue" EmailSecondary="Enim fringilla aliquam aliquet erat" Facebook="Hendrerit conubia vestibulum lobortis nibh" Fax="Sed dis" LinkedIn="Inceptos blandit commodo vestibulum" Mobile="Aptent bibendum auctor elit" MobileSecondary="Parturient elementum facilisis faucibus fermentum" NoMail="True" Name="Vestibulum nunc" PhoneSecondary="Morbi vestibulum vestibulum adipiscing facilisi" Phone="Quisque vivamus nullam" Source="Nisl nunc placerat" Skype="Est eros nulla cursus habitant" Surname="Amet curae curabitur phasellus" Title="Ante donec etiam consequat" Twitter="Interdum habitasse">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Fusce parturient" Country="Diam mauris eget" Name="Convallis adipiscing" ZipCode="Dignissim aenean nam arcu accumsan"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+					<CRM1:Contact.Tags>
+						<CRM1:Tag Color="Pulvinar odio" LastUpdate="07/30/2015 13:39:11" Name="Augue adipiscing"/>
+						<CRM1:Tag Color="Leo felis malesuada mus sagittis" LastUpdate="07/30/2015 13:39:11" Name="Dolor cubilia imperdiet dapibus fames"/>
+						<CRM1:Tag Color="Parturient orci vestibulum pede" LastUpdate="07/30/2015 13:39:11" Name="Senectus ipsum"/>
+						<CRM1:Tag Color="Suscipit lectus penatibus" LastUpdate="07/30/2015 13:39:11" Name="Justo vestibulum adipiscing sociosqu egestas"/>
+						<CRM1:Tag Color="Quam non libero ultrices vestibulum" LastUpdate="07/30/2015 13:39:11" Name="Parturient lacus torquent nec"/>
+					</CRM1:Contact.Tags>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Vestibulum posuere nulla dignissim mus" Description="Eleifend ornare natoque convallis enim" Email="Morbi praesent venenatis lacinia est" EmailSecondary="Parturient bibendum" Facebook="Elit vestibulum laoreet" Fax="Dis mattis duis ultricies" LinkedIn="Hac neque nostra" Mobile="Maecenas nunc amet mauris" MobileSecondary="Curabitur ante accumsan" NoMail="False" Name="Porttitor ligula quis vestibulum" PhoneSecondary="Vulputate adipiscing mollis montes" Phone="Cras iaculis sed metus" Source="Nec non" Skype="Phasellus arcu consequat diam" Surname="Per euismod vehicula adipiscing" Title="Tincidunt urna litora sed parturient" Twitter="Netus dictumst eget leo">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Sit feugiat gravida vel vestibulum" Country="Volutpat nam massa" Name="Tristique lorem magna" ZipCode="Sem luctus magnis vestibulum"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+					<CRM1:Contact.Tags>
+						<CRM1:Tag Color="Elementum porta platea" LastUpdate="07/30/2015 13:39:11" Name="Facilisi faucibus"/>
+						<CRM1:Tag Color="Adipiscing per pretium erat parturient" LastUpdate="07/30/2015 13:39:11" Name="Purus risus primis potenti"/>
+						<CRM1:Tag Color="Habitant rutrum facilisis adipiscing" LastUpdate="07/30/2015 13:39:11" Name="Vestibulum vestibulum sed"/>
+						<CRM1:Tag Color="Parturient velit vitae rhoncus" LastUpdate="07/30/2015 13:39:11" Name="Sapien inceptos"/>
+						<CRM1:Tag Color="Interdum eros vestibulum lobortis" LastUpdate="07/30/2015 13:39:11" Name="Sem sit sodales class"/>
+					</CRM1:Contact.Tags>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Imperdiet per" Description="Ipsum non justo himenaeos" Email="Tellus adipiscing tempor" EmailSecondary="Leo vestibulum torquent fames" Facebook="Duis vivamus" Fax="Proin augue nunc odio sociis" LinkedIn="Vestibulum vehicula urna adipiscing mus" Mobile="Senectus vestibulum sociosqu vestibulum taciti" MobileSecondary="Pede quam" NoMail="True" Name="Fermentum viverra curae nascetur fringilla" PhoneSecondary="Dolor suscipit orci parturient tempus" Phone="Hac sagittis nulla" Source="Tortor malesuada turpis" Skype="Hendrerit ultrices quis quisque" Surname="Vestibulum aliquam adipiscing" Title="Pharetra semper vel placerat donec" Twitter="Cras volutpat felis nec parturient">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Fusce sed parturient dis est" Country="Habitasse lorem morbi" Name="Nam integer etiam nibh pulvinar" ZipCode="Nisi nisl"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+					<CRM1:Contact.Tags>
+						<CRM1:Tag Color="Varius nunc aenean aliquet tincidunt" LastUpdate="07/30/2015 13:39:11" Name="Aliquam lacus penatibus porttitor"/>
+						<CRM1:Tag Color="Amet ante nullam ultricies" LastUpdate="07/30/2015 13:39:11" Name="Lorem tristique mauris magna maecenas"/>
+						<CRM1:Tag Color="Metus arcu sed" LastUpdate="07/30/2015 13:39:11" Name="Massa blandit"/>
+						<CRM1:Tag Color="Sem commodo" LastUpdate="07/30/2015 13:39:11" Name="Morbi praesent vestibulum"/>
+						<CRM1:Tag Color="Accumsan diam" LastUpdate="07/30/2015 13:39:11" Name="Venenatis conubia"/>
+					</CRM1:Contact.Tags>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Vestibulum dignissim elementum facilisis per" Description="Nec non habitant natoque" Email="Facilisi feugiat" EmailSecondary="Donec nisl gravida hac iaculis" Facebook="Consequat orci convallis" Fax="Sed euismod nibh vulputate" LinkedIn="Faucibus laoreet etiam" Mobile="Eleifend class" MobileSecondary="Curae nisi" NoMail="False" Name="Aptent eget" PhoneSecondary="Dis est cursus curabitur phasellus" Phone="Nam congue eros egestas" Source="Fermentum fringilla" Skype="Parturient lacinia vestibulum" Surname="Neque auctor" Title="Netus elit bibendum vestibulum nulla" Twitter="Nunc dictum leo odio mus">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Vel dapibus risus velit" Country="Erat vitae" Name="Dictumst enim cubilia porta sit" ZipCode="Adipiscing purus"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+					<CRM1:Contact.Tags>
+						<CRM1:Tag Color="Sit posuere lectus" LastUpdate="07/30/2015 13:39:11" Name="Pede habitasse sed sem hendrerit"/>
+						<CRM1:Tag Color="Rhoncus inceptos" LastUpdate="07/30/2015 13:39:11" Name="Potenti pretium"/>
+						<CRM1:Tag Color="Urna litora adipiscing vel sodales" LastUpdate="07/30/2015 13:39:11" Name="Libero quam ligula quis"/>
+						<CRM1:Tag Color="Nam viverra lobortis aliquam duis" LastUpdate="07/30/2015 13:39:11" Name="Interdum parturient cras"/>
+						<CRM1:Tag Color="Vestibulum fusce" LastUpdate="07/30/2015 13:39:11" Name="Himenaeos nunc integer sed"/>
+					</CRM1:Contact.Tags>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Tristique dapibus ultricies" Description="Sed cubilia suscipit eros tincidunt" Email="Vestibulum mus nec vestibulum" EmailSecondary="Non pharetra placerat" Facebook="Sociosqu erat rutrum" Fax="Augue penatibus" LinkedIn="Platea enim porttitor primis fames" Mobile="Montes leo commodo conubia" MobileSecondary="Nostra elit" NoMail="True" Name="Luctus dis" PhoneSecondary="Eget adipiscing" Phone="Adipiscing diam mollis parturient" Source="Torquent sapien" Skype="Pulvinar ornare dolor per" Surname="Lorem morbi est quisque magnis" Title="Vivamus amet aliquam mattis" Twitter="Sagittis senectus">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Hac imperdiet" Country="Arcu blandit malesuada vestibulum" Name="Ante nulla" ZipCode="Mauris nascetur aliquet proin"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+					<CRM1:Contact.Tags>
+						<CRM1:Tag Color="Nibh felis" LastUpdate="07/30/2015 13:39:11" Name="Semper ultrices vehicula sem"/>
+						<CRM1:Tag Color="Vel ipsum" LastUpdate="07/30/2015 13:39:11" Name="Sit egestas"/>
+						<CRM1:Tag Color="Volutpat euismod feugiat justo parturient" LastUpdate="07/30/2015 13:39:11" Name="Nisi venenatis nisl vulputate curabitur"/>
+						<CRM1:Tag Color="Nunc lorem phasellus" LastUpdate="07/30/2015 13:39:11" Name="Lacus sociis vestibulum gravida"/>
+						<CRM1:Tag Color="Parturient maecenas vestibulum praesent" LastUpdate="07/30/2015 13:39:11" Name="Vestibulum magna adipiscing nam"/>
+					</CRM1:Contact.Tags>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Eget elit eleifend enim malesuada" Description="Aenean adipiscing mauris posuere parturient" Email="Neque hac netus nunc amet" EmailSecondary="Fermentum mus purus" Facebook="Diam imperdiet risus varius" Fax="Est morbi" LinkedIn="Hendrerit arcu laoreet" Mobile="Cras duis" MobileSecondary="Turpis porta leo" NoMail="False" Name="Accumsan taciti consequat odio" PhoneSecondary="Nulla facilisis tortor" Phone="Urna parturient vestibulum tempus" Source="Velit potenti" Skype="Fringilla habitasse nec dictumst ante" Surname="Vestibulum iaculis" Title="Orci lacinia" Twitter="Non himenaeos natoque vestibulum">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Quam adipiscing tempor" Country="Bibendum quis dis elementum" Name="Convallis pede massa tellus dignissim" ZipCode="Metus sed"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+					<CRM1:Contact.Tags>
+						<CRM1:Tag Color="Sed erat" LastUpdate="07/30/2015 13:39:11" Name="Per vitae"/>
+						<CRM1:Tag Color="Aptent vel auctor vestibulum" LastUpdate="07/30/2015 13:39:11" Name="Facilisi penatibus sem sit nullam"/>
+						<CRM1:Tag Color="Eros sed dis" LastUpdate="07/30/2015 13:39:11" Name="Faucibus nam congue pretium"/>
+						<CRM1:Tag Color="Dictum lectus rhoncus habitant libero" LastUpdate="07/30/2015 13:39:11" Name="Est vestibulum adipiscing nibh cursus"/>
+						<CRM1:Tag Color="Inceptos viverra" LastUpdate="07/30/2015 13:39:11" Name="Sodales ligula litora"/>
+					</CRM1:Contact.Tags>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Urna cras" Description="Fames parturient phasellus" Email="Lorem senectus pede vestibulum" EmailSecondary="Montes curabitur" Facebook="Suscipit sed adipiscing" Fax="Etiam nec adipiscing" LinkedIn="Per augue aliquam sociosqu" Mobile="Sagittis parturient fusce orci" MobileSecondary="Vulputate nulla" NoMail="True" Name="Interdum lobortis" PhoneSecondary="Ultricies morbi venenatis non" Phone="Odio mauris mollis" Source="Sem platea" Skype="Proin nostra" Surname="Luctus class curae nascetur" Title="Nisi parturient hac porttitor vestibulum" Twitter="Quam dolor ornare quis vestibulum">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Leo vestibulum pulvinar donec magnis" Country="Mus mattis tincidunt tristique" Name="Pharetra nisl" ZipCode="Nunc placerat"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+					<CRM1:Contact.Tags>
+						<CRM1:Tag Color="Sit adipiscing parturient integer" LastUpdate="07/30/2015 13:39:11" Name="Vestibulum consequat vestibulum convallis"/>
+						<CRM1:Tag Color="Ipsum duis vel" LastUpdate="07/30/2015 13:39:11" Name="Vestibulum torquent primis felis"/>
+						<CRM1:Tag Color="Vestibulum ultrices" LastUpdate="07/30/2015 13:39:11" Name="Justo dignissim lacus nam elementum"/>
+						<CRM1:Tag Color="Quisque fermentum fringilla" LastUpdate="07/30/2015 13:39:11" Name="Nunc facilisis"/>
+						<CRM1:Tag Color="Amet vehicula ante rutrum" LastUpdate="07/30/2015 13:39:11" Name="Sed adipiscing"/>
+					</CRM1:Contact.Tags>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Vestibulum tincidunt facilisi tempus" Description="Odio tempor" Email="Eros morbi" EmailSecondary="Nulla porta mus" Facebook="Nunc sit eleifend dapibus" Fax="Erat imperdiet vestibulum" LinkedIn="Porttitor non risus per sed" Mobile="Adipiscing tellus" MobileSecondary="Netus nibh dictumst" NoMail="False" Name="Sapien lorem vivamus arcu" PhoneSecondary="Malesuada neque bibendum" Phone="Parturient conubia himenaeos vestibulum" Source="Tristique vel ultricies tortor" Skype="Nisi penatibus purus nec" Surname="Semper aliquam volutpat diam maecenas" Title="Aliquet blandit" Twitter="Parturient sem nisl velit cubilia">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Taciti massa accumsan hac" Country="Metus enim leo" Name="Sociis magna habitasse praesent eget" ZipCode="Commodo dis hendrerit est elit"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+					<CRM1:Contact.Tags>
+						<CRM1:Tag Color="Dis pede" LastUpdate="07/30/2015 13:39:11" Name="Orci nam sed faucibus"/>
+						<CRM1:Tag Color="Vitae habitant hac" LastUpdate="07/30/2015 13:39:11" Name="Vestibulum est"/>
+						<CRM1:Tag Color="Leo mus turpis" LastUpdate="07/30/2015 13:39:11" Name="Quam egestas venenatis vulputate euismod"/>
+						<CRM1:Tag Color="Nec non phasellus" LastUpdate="07/30/2015 13:39:11" Name="Curabitur varius quis aenean"/>
+						<CRM1:Tag Color="Consequat donec convallis" LastUpdate="07/30/2015 13:39:11" Name="Urna class cras adipiscing curae"/>
+					</CRM1:Contact.Tags>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Congue posuere eros" Description="Nascetur vestibulum enim malesuada erat" Email="Adipiscing lorem nullam morbi fringilla" EmailSecondary="Diam nulla proin aptent lacinia" Facebook="Auctor imperdiet adipiscing dolor parturient" Fax="Vestibulum iaculis" LinkedIn="Augue sed laoreet" Mobile="Ante vel interdum" MobileSecondary="Vestibulum lobortis hendrerit himenaeos arcu" NoMail="True" Name="Parturient vestibulum" PhoneSecondary="Habitasse parturient" Phone="Vestibulum gravida" Source="Fames dis est hac" Skype="Nam vestibulum eget" Surname="Dignissim etiam duis" Title="Nunc feugiat amet elementum per" Twitter="Natoque elit">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Fusce fermentum" Country="Inceptos adipiscing parturient" Name="Mauris sed" ZipCode="Facilisis sem vestibulum sit"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+					<CRM1:Contact.Tags>
+						<CRM1:Tag Color="Cursus pharetra placerat" LastUpdate="07/30/2015 13:39:11" Name="Felis potenti vestibulum"/>
+						<CRM1:Tag Color="Ipsum pretium" LastUpdate="07/30/2015 13:39:11" Name="Pulvinar leo"/>
+						<CRM1:Tag Color="Adipiscing nibh" LastUpdate="07/30/2015 13:39:11" Name="Justo penatibus dictum porttitor tincidunt"/>
+						<CRM1:Tag Color="Rhoncus tristique" LastUpdate="07/30/2015 13:39:11" Name="Lectus mus parturient"/>
+						<CRM1:Tag Color="Libero per ultricies vestibulum" LastUpdate="07/30/2015 13:39:11" Name="Nec vestibulum non"/>
+					</CRM1:Contact.Tags>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Mollis montes" Description="Urna bibendum dictumst" Email="Morbi consequat pede" EmailSecondary="Netus nulla parturient quam convallis" Facebook="Dignissim integer" Fax="Mattis vestibulum massa metus aliquam" LinkedIn="Porta purus" Mobile="Curabitur orci vestibulum phasellus" MobileSecondary="Adipiscing praesent" NoMail="False" Name="Ligula venenatis adipiscing" PhoneSecondary="Vel volutpat neque mauris maecenas" Phone="Vulputate parturient odio viverra magnis" Source="Quisque vivamus nam aliquam risus" Skype="Vestibulum accumsan quis" Surname="Sed nisi sagittis sem" Title="Senectus sociosqu suscipit nisl lacus" Twitter="Vestibulum adipiscing">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Magna litora luctus" Country="Ultrices vehicula sit" Name="Lorem sodales" ZipCode="Nunc torquent"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+					<CRM1:Contact.Tags>
+						<CRM1:Tag Color="Vitae parturient class" LastUpdate="07/30/2015 13:39:11" Name="Velit nostra cras"/>
+						<CRM1:Tag Color="Curae nunc platea elementum" LastUpdate="07/30/2015 13:39:11" Name="Eleifend duis sed ornare"/>
+						<CRM1:Tag Color="Commodo fermentum primis vestibulum facilisi" LastUpdate="07/30/2015 13:39:11" Name="Aliquet donec facilisis blandit vestibulum"/>
+						<CRM1:Tag Color="Faucibus est etiam fusce amet" LastUpdate="07/30/2015 13:39:11" Name="Fringilla dis"/>
+						<CRM1:Tag Color="Inceptos habitasse lorem hendrerit morbi" LastUpdate="07/30/2015 13:39:11" Name="Ante habitant"/>
+					</CRM1:Contact.Tags>
+				</CRM1:Contact>
+			</CRM1:Tag.Contacts>
+			<CRM1:Tag.Id>
+				<System:Guid/>
+			</CRM1:Tag.Id>
+			<CRM1:Tag.RepositoryId>
+				<System:Guid/>
+			</CRM1:Tag.RepositoryId>
+			<CRM1:Tag.Version>
+				<System:Guid/>
+			</CRM1:Tag.Version>
+		</CRM1:Tag>
+	</CRM:TagEditViewModel.Current>
+	<CRM:TagEditViewModel.Commands>
+		<Commands:CommandManager/>
+	</CRM:TagEditViewModel.Commands>
+</CRM:TagEditViewModel>

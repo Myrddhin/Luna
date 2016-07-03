@@ -1,85 +1,80 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.ComponentModel;
 using System.Threading.Tasks;
 using Loki.Commands;
 using Loki.Common;
-using Loki.UI;
-using Loki.UI.Tasks;
-
 using Luna.Data.CRM;
 using Luna.Model.CRM;
-using Luna.Model.Storage;
 
 namespace Luna.UI.CRM
 {
     public class TagEditViewModel : DocumentScreen
     {
-        public ICRMDataProvider DataProvider { get; set; }
+        public ICRMDataProvider DataContext { get; set; }
 
-        public IEnumerable<CommandElement> RowCommands
+        public Tag Current { get; set; }
+
+        #region Name
+
+        private readonly PropertyChangedEventArgs ArgspropertyBackerChanged = ObservableHelper.CreateChangedArgs<TagEditViewModel>(x => x.Name);
+
+        public string Name
         {
             get
             {
-                return new CommandElement[] { new CommandElement() { Command = TestCommand, DisplayName = "TestCommand" } };
+                return Current.Name;
+            }
+
+            set
+            {
+                if (!object.Equals(Current.Name, value))
+                {
+                    Current.Name = value;
+                    NotifyChangedAndDirty(ArgspropertyBackerChanged);
+                }
             }
         }
 
-        public ICommand TestCommand { get; private set; }
+        #endregion Name
 
-        public TagEditViewModel()
+        #region Color
+
+        private readonly PropertyChangedEventArgs ArgsColorChanged = ObservableHelper.CreateChangedArgs<TagEditViewModel>(x => x.Color);
+
+        public string Color
         {
-            DisplayName = "Tags";
-            Tags = new BindableCollection<Tag>();
+            get
+            {
+                return Current.Color;
+            }
+
+            set
+            {
+                if (!object.Equals(Current.Color, value))
+                {
+                    Current.Color = value;
+                    NotifyChanged(ArgsColorChanged);
+                }
+            }
         }
 
-        private ITaskConfiguration<object, IEnumerable<Tag>> cloudGetter;
-
-        public BindableCollection<Tag> Tags { get; private set; }
+        #endregion Color
 
         protected override void OnInitialize()
         {
-            TestCommand = Commands.Create();
-
             base.OnInitialize();
 
-            Commands.Handle(LunaCommands.Add, Command_Add_Execute);
-            Commands.Handle(TestCommand, TestCommand_CanExecute, TestCommand_Execute);
-
-            cloudGetter = CreateWorker<object, IEnumerable<Tag>>("Chargement", CloudGetter_DoWork);
+            Commands.Handle(ApplicationCommands.Save, Save_CanExecute, Save_Execute);
         }
 
-        protected async override void OnLoad()
+        private void Save_Execute(object sender, CommandEventArgs e)
         {
-            var tags = await cloudGetter.DoWorkAsync(null);
-
-            Tags.Clear();
-            Tags.AddRange(tags);
-
-            base.OnLoad();
+            Task.WaitAll(DataContext.SaveAsync(Current));
+            Task.WaitAll(DataContext.SaveChangesAsync());
         }
 
-        private async Task<IEnumerable<Tag>> CloudGetter_DoWork(object o)
+        private void Save_CanExecute(object sender, CanExecuteCommandEventArgs e)
         {
-            await DataProvider.EnsureCloudRefresh();
-            await Task.Delay(5000);
-            return DataProvider.Tags;
-        }
-
-        private void Command_Add_Execute(object sender, CommandEventArgs e)
-        {
-            ApplicationCommands.Open.Execute(new Tag());
-        }
-
-        private void TestCommand_Execute(object sender, CommandEventArgs e)
-        {
-            var items = e.Parameter as IEnumerable;
-            Toolkit.UI.Signals.Message(string.Join(";", items.OfType<Tag>().Select(x => x.Name)));
-        }
-
-        private void TestCommand_CanExecute(object sender, CanExecuteCommandEventArgs e)
-        {
-            e.CanExecute |= e.Parameter != null && ((IEnumerable)e.Parameter).OfType<Tag>().Count() > 1;
+            e.CanExecute |= !string.IsNullOrWhiteSpace(Name) && !string.IsNullOrWhiteSpace(Color);
         }
     }
 }

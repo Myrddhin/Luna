@@ -21,6 +21,7 @@ namespace Luna.UI
 
             context.Register(Element.For<DirectoryViewModel>().Lifestyle.Transient);
             context.Register(Element.For<ContactEditViewModel>().Lifestyle.Transient);
+            context.Register(Element.For<TagListViewModel>().Lifestyle.Transient);
             context.Register(Element.For<TagEditViewModel>().Lifestyle.Transient);
 
             context.Register(Element.For<IScreenFactory>().AsFactory());

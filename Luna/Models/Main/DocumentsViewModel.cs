@@ -31,9 +31,41 @@ namespace Luna.UI.Main
             base.OnInitialize();
 
             Commands.Handle(ApplicationCommands.Open, Open_Contact_CanExecute, Open_Contact_Execute);
+            Commands.Handle(ApplicationCommands.Open, Open_Tag_CanExecute, Open_Tag_Execute);
         }
 
-        private void Open_Contact_CanExecute(object sender, CanExecuteCommandEventArgs e)
+        private static void Open_Tag_CanExecute(object sender, CanExecuteCommandEventArgs e)
+        {
+            e.CanExecute |= e.Parameter is Tag;
+        }
+
+        private void Open_Tag_Execute(object sender, CommandEventArgs e)
+        {
+            var contact = e.Parameter as Tag;
+            if (contact != null)
+            {
+                TagEditViewModel item = null;
+
+                foreach (var candidate in Children.OfType<TagEditViewModel>())
+                {
+                    if (candidate.Current != null && candidate.Current.Id == contact.Id)
+                    {
+                        item = candidate;
+                    }
+                }
+
+                if (item == null)
+                {
+                    item = ScreenFactory.Create<TagEditViewModel>();
+                    EnsureItem(item);
+                    item.Current = contact;
+                }
+
+                ActivateItem(item);
+            }
+        }
+
+        private static void Open_Contact_CanExecute(object sender, CanExecuteCommandEventArgs e)
         {
             e.CanExecute |= e.Parameter is Contact;
         }
@@ -86,9 +118,9 @@ namespace Luna.UI.Main
             ActivateItem(item);
         }
 
-        public void Handle(NavigationMessage<TagEditViewModel> message)
+        public void Handle(NavigationMessage<TagListViewModel> message)
         {
-            Handle<TagEditViewModel>(message);
+            Handle<TagListViewModel>(message);
         }
 
         public void Handle(NavigationMessage<DirectoryViewModel> message)
@@ -104,6 +136,11 @@ namespace Luna.UI.Main
         public void Handle(NavigationMessage<ImportViewModel> message)
         {
             Handle<ImportViewModel>(message);
+        }
+
+        public void Handle(NavigationMessage<TagEditViewModel> message)
+        {
+            Handle<TagEditViewModel>(message);
         }
     }
 }

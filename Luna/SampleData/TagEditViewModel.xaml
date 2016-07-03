@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CRM:TagEditViewModel xmlns:CRM="clr-namespace:Luna.UI.CRM"
+                  xmlns:model="clr-namespace:Luna.Model.CRM;assembly=Luna.Model.Client"
+                  Name="Test" Color="#FF00FF00">
+  <CRM:TagEditViewModel.Current>
+    <model:Tag Name="Backer" Color="#FFFF0000" />
+  </CRM:TagEditViewModel.Current>
+</CRM:TagEditViewModel>

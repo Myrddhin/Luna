@@ -1,1 +1,3 @@
-DevExpress.Xpf.Editors.ButtonEdit, DevExpress.Xpf.Core.v15.1, Version=15.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Xpf.LayoutControl.LayoutControl, DevExpress.Xpf.LayoutControl.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Xpf.LayoutControl.LayoutGroup, DevExpress.Xpf.LayoutControl.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Xpf.Navigation.TileNavPane, DevExpress.Xpf.Controls.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a

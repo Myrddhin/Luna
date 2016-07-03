@@ -116,6 +116,7 @@ namespace Luna.Data.Local.SQLite
         private void InitializeConnection(string databaseName)
         {
             connectionBuilder.DataSource = databaseName;
+            ConnectionBuilder.BinaryGUID = true;
 
             OnConnectionChanged(EventArgs.Empty);
 

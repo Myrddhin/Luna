@@ -1,0 +1,589 @@
+﻿<CRM:TagListViewModel xmlns:CRM="clr-namespace:Luna.UI.CRM" xmlns:Commands="clr-namespace:Loki.Commands;assembly=Loki.Core" xmlns:UI="clr-namespace:Loki.UI;assembly=Loki.Core" xmlns:CRM1="clr-namespace:Luna.Model.CRM;assembly=Luna.Model.Client" xmlns:System="clr-namespace:System;assembly=mscorlib" DisplayName="Ornare ultrices orci vehicula sem" IsChanged="True" IsLoaded="True" IsInitialized="False" IsBusy="False" IsActive="True" Status="Per sed odio" Tracking="False">
+	<CRM:TagListViewModel.Commands>
+		<Commands:CommandManager/>
+	</CRM:TagListViewModel.Commands>
+	<CRM:TagListViewModel.RowCommands>
+		<UI:CommandElement DisplayName="Nam class" Glyph="Vestibulum cras aliquam" IsChanged="True" Tracking="False">
+			<UI:CommandElement.Commands>
+				<Commands:CommandManager/>
+			</UI:CommandElement.Commands>
+		</UI:CommandElement>
+		<UI:CommandElement DisplayName="Curabitur phasellus integer curae sed" Glyph="Duis dis" IsChanged="True" Tracking="False">
+			<UI:CommandElement.Commands>
+				<Commands:CommandManager/>
+			</UI:CommandElement.Commands>
+		</UI:CommandElement>
+		<UI:CommandElement DisplayName="Quisque maecenas est praesent" Glyph="Consequat donec hac leo mus" IsChanged="True" Tracking="False">
+			<UI:CommandElement.Commands>
+				<Commands:CommandManager/>
+			</UI:CommandElement.Commands>
+		</UI:CommandElement>
+		<UI:CommandElement DisplayName="Vivamus aenean adipiscing nec etiam" Glyph="Mauris aliquam fusce accumsan" IsChanged="True" Tracking="False">
+			<UI:CommandElement.Commands>
+				<Commands:CommandManager/>
+			</UI:CommandElement.Commands>
+		</UI:CommandElement>
+		<UI:CommandElement DisplayName="Nullam bibendum aliquet" Glyph="Aptent auctor" IsChanged="True" Tracking="False">
+			<UI:CommandElement.Commands>
+				<Commands:CommandManager/>
+			</UI:CommandElement.Commands>
+		</UI:CommandElement>
+		<UI:CommandElement DisplayName="Parturient non" Glyph="Congue vestibulum" IsChanged="True" Tracking="False">
+			<UI:CommandElement.Commands>
+				<Commands:CommandManager/>
+			</UI:CommandElement.Commands>
+		</UI:CommandElement>
+		<UI:CommandElement DisplayName="Cursus dictum per convallis" Glyph="Lectus vestibulum dictumst lorem" IsChanged="True" Tracking="False">
+			<UI:CommandElement.Commands>
+				<Commands:CommandManager/>
+			</UI:CommandElement.Commands>
+		</UI:CommandElement>
+		<UI:CommandElement DisplayName="Eleifend nunc" Glyph="Dignissim libero morbi elementum" IsChanged="True" Tracking="False">
+			<UI:CommandElement.Commands>
+				<Commands:CommandManager/>
+			</UI:CommandElement.Commands>
+		</UI:CommandElement>
+		<UI:CommandElement DisplayName="Facilisi sed ligula adipiscing parturient" Glyph="Amet ante litora" IsChanged="True" Tracking="False">
+			<UI:CommandElement.Commands>
+				<Commands:CommandManager/>
+			</UI:CommandElement.Commands>
+		</UI:CommandElement>
+		<UI:CommandElement DisplayName="Nulla proin" Glyph="Faucibus habitant" IsChanged="True" Tracking="False">
+			<UI:CommandElement.Commands>
+				<Commands:CommandManager/>
+			</UI:CommandElement.Commands>
+		</UI:CommandElement>
+	</CRM:TagListViewModel.RowCommands>
+	<CRM:TagListViewModel.Tags>
+		<CRM1:Tag Color="Arcu augue sem inceptos" LastUpdate="07/30/2015 13:28:52" Name="Luctus blandit">
+			<CRM1:Tag.Contacts>
+				<CRM1:Contact Comments="Magna massa" Description="Iaculis lorem placerat" Email="Mus parturient nibh nec" EmailSecondary="Dapibus adipiscing imperdiet montes egestas" Facebook="Justo gravida lacus" Fax="Lobortis cubilia hac" LinkedIn="Malesuada ornare non" Mobile="Erat mollis leo eros" MobileSecondary="Vestibulum himenaeos nisi" NoMail="True" Name="Magnis dolor commodo" PhoneSecondary="Vestibulum nascetur hendrerit" Phone="Est elit habitasse enim" Source="Metus nisl nunc penatibus pulvinar" Skype="Nostra pharetra" Surname="Conubia sit interdum vel nam" Title="Mattis vestibulum" Twitter="Euismod per platea feugiat primis">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Fermentum felis adipiscing sed" Country="Dis ipsum fringilla" Name="Facilisis fames mauris" ZipCode="Diam eget vestibulum"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Rhoncus nullam dis" Description="Mauris pretium phasellus" Email="Varius posuere tincidunt sit" EmailSecondary="Ultricies nulla porta purus venenatis" Facebook="Elit enim potenti" Fax="Turpis nunc morbi" LinkedIn="Nam volutpat" Mobile="Natoque vestibulum neque amet porttitor" MobileSecondary="Tristique arcu aenean" NoMail="False" Name="Rutrum odio orci" PhoneSecondary="Ante netus" Phone="Tortor duis ultrices" Source="Consequat erat eros aptent" Skype="Diam vehicula eget vel vulputate" Surname="Pede lacinia sagittis sapien quam" Title="Parturient senectus quis urna" Twitter="Curabitur sed">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Sociosqu suscipit" Country="Torquent cras tellus tempor tempus" Name="Semper sociis sed" ZipCode="Sem laoreet vestibulum taciti"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Lorem parturient luctus" Description="Adipiscing sed pede" Email="Facilisi facilisis nec faucibus" EmailSecondary="Non fusce" Facebook="Habitasse vestibulum inceptos vestibulum litora" Fax="Donec etiam elementum" LinkedIn="Libero odio orci" Mobile="Auctor nisl vivamus mus" MobileSecondary="Habitant dictum fermentum lectus" NoMail="True" Name="Maecenas sodales viverra risus" PhoneSecondary="Congue cursus" Phone="Convallis quisque dignissim" Source="Morbi sem" Skype="Nunc fringilla" Surname="Velit vitae est" Title="Praesent nibh adipiscing class" Twitter="Aliquam ligula aliquet per blandit">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Aliquam nisi" Country="Leo dictumst integer eleifend" Name="Accumsan hac" ZipCode="Bibendum curae parturient"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Porttitor ipsum" Description="Vestibulum diam" Email="Nulla egestas" EmailSecondary="Dolor fames euismod nostra" Facebook="Felis iaculis penatibus" Fax="Mollis dapibus nunc sed vestibulum" LinkedIn="Ante gravida" Mobile="Vestibulum malesuada" MobileSecondary="Sagittis senectus" NoMail="False" Name="Quam interdum" PhoneSecondary="Montes dis proin est augue" Phone="Cubilia parturient pulvinar" Source="Justo hac" Skype="Amet adipiscing feugiat ornare" Surname="Lobortis magnis quis commodo nascetur" Title="Hendrerit urna pharetra mattis mauris" Twitter="Arcu parturient">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Duis vestibulum" Country="Nam adipiscing" Name="Sit himenaeos cras" ZipCode="Conubia imperdiet placerat vestibulum vel"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Nisi aliquet nisl parturient" Description="Nulla adipiscing" Email="Magna sociis viverra vulputate accumsan" EmailSecondary="Phasellus metus morbi consequat" Facebook="Sit vestibulum convallis" Fax="Vehicula volutpat" LinkedIn="Tempor integer quisque vivamus" Mobile="Maecenas erat eros praesent" MobileSecondary="Vestibulum bibendum massa" NoMail="True" Name="Lacinia laoreet platea lacus natoque" PhoneSecondary="Taciti tellus per curabitur nibh" Phone="Enim nec lorem non semper" Source="Eleifend tortor" Skype="Sed aliquam neque" Surname="Posuere eget" Title="Tincidunt primis" Twitter="Netus tempus dictumst sem aliquam">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Rhoncus vestibulum ultrices ultricies sapien" Country="Venenatis adipiscing mus parturient sodales" Name="Tristique sociosqu rutrum elit suscipit" ZipCode="Torquent leo potenti pretium"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+			</CRM1:Tag.Contacts>
+			<CRM1:Tag.Id>
+				<System:Guid/>
+			</CRM1:Tag.Id>
+			<CRM1:Tag.RepositoryId>
+				<System:Guid/>
+			</CRM1:Tag.RepositoryId>
+			<CRM1:Tag.Version>
+				<System:Guid/>
+			</CRM1:Tag.Version>
+		</CRM1:Tag>
+		<CRM1:Tag Color="Porta purus turpis vestibulum" LastUpdate="07/30/2015 13:28:53" Name="Blandit vel nam">
+			<CRM1:Tag.Contacts>
+				<CRM1:Contact Comments="Morbi nulla vestibulum pharetra" Description="Laoreet congue lorem nec" Email="Dapibus egestas" EmailSecondary="Feugiat lobortis hac gravida" Facebook="Mus lacinia" Fax="Fringilla nullam aptent" LinkedIn="Iaculis etiam" Mobile="Urna curae adipiscing" MobileSecondary="Cras duis donec euismod interdum" NoMail="False" Name="Nunc odio varius" PhoneSecondary="Parturient est" Phone="Fermentum class quis" Source="Amet placerat habitasse" Skype="Auctor nascetur nunc" Surname="Vestibulum facilisi commodo" Title="Dignissim orci faucibus elementum" Twitter="Leo fusce">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Velit dis vitae" Country="Mauris cubilia inceptos quam" Name="Sed aenean pede" ZipCode="Habitant risus conubia facilisis"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Praesent elit accumsan" Description="Eget ultricies maecenas" Email="Potenti sed dolor dis fames" EmailSecondary="Sodales felis porttitor lectus" Facebook="Tristique vehicula volutpat" Fax="Vestibulum posuere" LinkedIn="Torquent justo" Mobile="Imperdiet vel vestibulum nam" MobileSecondary="Penatibus hac rhoncus adipiscing" NoMail="True" Name="Cursus pulvinar" PhoneSecondary="Est malesuada pretium" Phone="Himenaeos sit" Source="Enim bibendum" Skype="Libero ipsum tincidunt ligula" Surname="Ante proin dictum sagittis non" Title="Senectus hendrerit sociosqu per" Twitter="Ultrices parturient litora">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Natoque suscipit adipiscing" Country="Arcu diam parturient" Name="Sed sem" ZipCode="Augue vestibulum"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Semper porta per" Description="Blandit dignissim commodo interdum sapien" Email="Facilisi metus vivamus aliquam" EmailSecondary="Quam ornare" Facebook="Urna convallis non" Fax="Mollis nec montes adipiscing curabitur" LinkedIn="Platea inceptos netus vestibulum nulla" Mobile="Parturient odio orci" MobileSecondary="Neque nostra" NoMail="False" Name="Venenatis leo dictumst erat" PhoneSecondary="Pede phasellus aliquet consequat morbi" Phone="Mauris mus" Source="Elementum facilisis vestibulum" Skype="Faucibus habitant quis" Surname="Eros vestibulum vulputate" Title="Vestibulum eleifend" Twitter="Primis rutrum">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Lacus aliquam lorem nunc magna" Country="Massa integer quisque" Name="Nibh luctus magnis" ZipCode="Nisi viverra nisl mattis"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Augue nisi" Description="Proin tempus nibh" Email="Placerat donec" EmailSecondary="Elit sed sagittis tellus" Facebook="Sem morbi porttitor nulla" Fax="Class feugiat habitasse vestibulum" LinkedIn="Enim lorem adipiscing erat" Mobile="Hendrerit sociis himenaeos imperdiet curae" MobileSecondary="Pulvinar taciti" NoMail="True" Name="Lobortis purus conubia" PhoneSecondary="Malesuada etiam" Phone="Eget fringilla" Source="Sit iaculis vestibulum tincidunt tristique" Skype="Penatibus tempor fusce" Surname="Nascetur cubilia adipiscing risus cras" Title="Duis dapibus" Twitter="Eros senectus parturient gravida vestibulum">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Ante parturient" Country="Arcu vestibulum vitae pharetra diam" Name="Fermentum velit nunc egestas" ZipCode="Amet euismod"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Metus bibendum pretium dictum" Description="Accumsan potenti vestibulum cursus dignissim" Email="Phasellus aptent justo laoreet" EmailSecondary="Auctor adipiscing congue" Facebook="Posuere quis massa" Fax="Maecenas vulputate felis" LinkedIn="Praesent convallis" Mobile="Ipsum curabitur" MobileSecondary="Vestibulum vestibulum orci lorem consequat" NoMail="False" Name="Sociosqu ultricies" PhoneSecondary="Odio lacus" Phone="Lacinia nullam dis" Source="Leo adipiscing" Skype="Magna parturient est pede" Surname="Nisl suscipit" Title="Torquent dolor vel" Twitter="Vestibulum natoque quam hac">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Fames sed parturient volutpat" Country="Venenatis nunc mauris" Name="Ultrices tortor turpis adipiscing" ZipCode="Varius aenean nam vehicula"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+			</CRM1:Tag.Contacts>
+			<CRM1:Tag.Id>
+				<System:Guid/>
+			</CRM1:Tag.Id>
+			<CRM1:Tag.RepositoryId>
+				<System:Guid/>
+			</CRM1:Tag.RepositoryId>
+			<CRM1:Tag.Version>
+				<System:Guid/>
+			</CRM1:Tag.Version>
+		</CRM1:Tag>
+		<CRM1:Tag Color="Neque urna dictumst lectus" LastUpdate="07/30/2015 13:28:53" Name="Elementum morbi">
+			<CRM1:Tag.Contacts>
+				<CRM1:Contact Comments="Enim augue ultricies" Description="Vel integer pharetra elit" Email="Viverra ligula donec lobortis" EmailSecondary="Vestibulum porttitor etiam sem tincidunt" Facebook="Nulla proin sit" Fax="Inceptos nunc himenaeos" LinkedIn="Vestibulum tristique fusce lorem" Mobile="Interdum amet" MobileSecondary="Malesuada arcu diam penatibus" NoMail="True" Name="Parturient facilisis rhoncus mus" PhoneSecondary="Ante imperdiet" Phone="Class curae libero habitant hendrerit" Source="Placerat adipiscing nam sed venenatis" Skype="Litora nascetur" Surname="Nec cras eleifend facilisi" Title="Faucibus sodales fermentum netus nulla" Twitter="Eget morbi aliquam">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Sed vitae habitasse" Country="Adipiscing parturient duis" Name="Porta vestibulum vestibulum non" ZipCode="Purus risus velit fringilla per"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Egestas sem" Description="Adipiscing vehicula parturient orci sed" Email="Montes curabitur nostra aliquet" EmailSecondary="Nisi adipiscing nisl ultrices nunc" Facebook="Magna cubilia dapibus" Fax="Senectus sociosqu mauris vivamus" LinkedIn="Vestibulum lacus consequat lorem" Mobile="Suscipit aliquam mollis" MobileSecondary="Phasellus torquent commodo nibh" NoMail="False" Name="Erat luctus quisque" PhoneSecondary="Nec blandit" Phone="Vestibulum sagittis" Source="Platea primis" Skype="Non conubia parturient odio per" Surname="Pulvinar dis" Title="Dolor magnis est" Twitter="Convallis vestibulum ornare dignissim elementum">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Vestibulum ipsum mus" Country="Vulputate justo" Name="Fames parturient" ZipCode="Mattis hac eros leo felis"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Rhoncus penatibus" Description="Malesuada pretium mus duis tempor" Email="Vestibulum bibendum laoreet dictumst" EmailSecondary="Parturient leo" Facebook="Potenti porta" Fax="Lacinia habitasse dis" LinkedIn="Vestibulum himenaeos imperdiet" Mobile="Est hac" MobileSecondary="Quam posuere neque quis netus" NoMail="True" Name="Massa facilisis vestibulum" PhoneSecondary="Natoque adipiscing eleifend morbi" Phone="Metus praesent accumsan vestibulum" Source="Facilisi faucibus vestibulum porttitor" Skype="Sociis urna hendrerit cras" Surname="Euismod rutrum volutpat vestibulum feugiat" Title="Maecenas adipiscing gravida" Twitter="Taciti nulla tellus">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Vel fermentum" Country="Pede nam sed fringilla" Name="Sapien iaculis semper" ZipCode="Sit parturient"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Erat fusce sagittis lorem" Description="Phasellus egestas parturient" Email="Parturient aliquet vulputate interdum" EmailSecondary="Conubia nascetur" Facebook="Dapibus elit enim vel pulvinar" Fax="Arcu varius aenean class" LinkedIn="Pharetra cubilia aptent auctor placerat" Mobile="Curae sem aliquam donec venenatis" MobileSecondary="Lobortis diam commodo mauris" NoMail="False" Name="Sodales nec purus tempus non" PhoneSecondary="Blandit etiam vestibulum" Phone="Sed vitae ultricies inceptos turpis" Source="Morbi nam euismod" Skype="Nullam curabitur" Surname="Viverra tincidunt aliquam adipiscing" Title="Habitant integer quisque tortor parturient" Twitter="Vestibulum eget sit adipiscing congue">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Velit amet ante vestibulum vivamus" Country="Adipiscing tristique" Name="Vestibulum nunc" ZipCode="Risus per"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Sed hendrerit pretium mattis" Description="Ipsum justo odio" Email="Augue libero" EmailSecondary="Ligula litora nec" Facebook="Adipiscing posuere per habitasse potenti" Fax="Dignissim elementum volutpat lectus" LinkedIn="Fames felis natoque nunc" Mobile="Nisi leo proin" MobileSecondary="Fringilla laoreet vestibulum dolor" NoMail="True" Name="Consequat cursus" PhoneSecondary="Facilisis fermentum lacinia mus vestibulum" Phone="Convallis gravida iaculis" Source="Lacus orci pede himenaeos mauris" Skype="Nisl luctus" Surname="Sed eros nibh" Title="Vestibulum feugiat" Twitter="Magnis non">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Adipiscing vehicula dictum parturient" Country="Nulla est hac" Name="Vestibulum senectus sociosqu" ZipCode="Suscipit torquent dis ultrices"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+			</CRM1:Tag.Contacts>
+			<CRM1:Tag.Id>
+				<System:Guid/>
+			</CRM1:Tag.Id>
+			<CRM1:Tag.RepositoryId>
+				<System:Guid/>
+			</CRM1:Tag.RepositoryId>
+			<CRM1:Tag.Version>
+				<System:Guid/>
+			</CRM1:Tag.Version>
+		</CRM1:Tag>
+		<CRM1:Tag Color="Malesuada lorem" LastUpdate="07/30/2015 13:28:53" Name="Maecenas rhoncus sem imperdiet quam">
+			<CRM1:Tag.Contacts>
+				<CRM1:Contact Comments="Parturient arcu" Description="Sapien leo curabitur lobortis" Email="Vel facilisi" EmailSecondary="Adipiscing sed blandit duis dis" Facebook="Hac porta interdum ante" Fax="Parturient dictumst netus nulla" LinkedIn="Rutrum amet vulputate" Mobile="Tristique eleifend ultricies vivamus" MobileSecondary="Aliquam nam aliquet" NoMail="False" Name="Quis sodales praesent magna mollis" PhoneSecondary="Vestibulum venenatis vestibulum cras faucibus" Phone="Neque ornare adipiscing" Source="Semper phasellus sociis taciti" Skype="Habitant platea nunc primis" Surname="Urna viverra penatibus" Title="Porttitor massa aliquam" Twitter="Inceptos est">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Morbi parturient nostra vestibulum" Country="Sit bibendum vestibulum" Name="Metus accumsan" ZipCode="Tincidunt integer quisque montes"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Quam maecenas" Description="Lacinia volutpat morbi pede" Email="Adipiscing parturient euismod sociosqu" EmailSecondary="Fermentum nunc fringilla" Facebook="Orci vestibulum sed aenean" Fax="Per nibh" LinkedIn="Varius torquent ultrices" Mobile="Pulvinar nisi etiam sagittis senectus" MobileSecondary="Turpis feugiat" NoMail="True" Name="Vestibulum purus diam tellus" PhoneSecondary="Fusce nisl" Phone="Placerat enim erat non eros" Source="Sem praesent" Skype="Gravida suscipit" Surname="Nascetur risus velit vitae" Title="Class consequat commodo pharetra convallis" Twitter="Lorem vehicula iaculis odio">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Dapibus egestas nec" Country="Vestibulum facilisis eget elit tortor" Name="Conubia curae tempor tempus" ZipCode="Donec mus dignissim elementum cubilia"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Leo porttitor mus libero" Description="Lectus arcu" Email="Facilisi parturient" EmailSecondary="Hac fames dictum" Facebook="Amet nascetur aliquet ante blandit" Fax="Duis congue" LinkedIn="Quisque vivamus aliquam" Mobile="Nam sed nunc cursus aliquam" MobileSecondary="Habitant dolor integer est" NoMail="False" Name="Quis sit accumsan bibendum" PhoneSecondary="Faucibus vestibulum dis vestibulum augue" Phone="Cras viverra adipiscing" Source="Tincidunt ligula litora" Skype="Inceptos interdum felis lobortis adipiscing" Surname="Vestibulum mauris dictumst" Title="Laoreet habitasse natoque" Twitter="Malesuada penatibus ipsum">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Auctor himenaeos rhoncus sodales" Country="Vel imperdiet urna" Name="Eleifend posuere nulla potenti" ZipCode="Nullam hendrerit aptent pretium proin"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Nulla consequat mauris" Description="Netus phasellus ultrices est" Email="Metus adipiscing eros dapibus venenatis" EmailSecondary="Vel vestibulum nam curabitur adipiscing" Facebook="Neque nisl dis torquent nunc" Fax="Sem cubilia massa erat" LinkedIn="Sociosqu euismod suscipit feugiat" Mobile="Vestibulum vestibulum" MobileSecondary="Sit magnis vestibulum" NoMail="True" Name="Parturient justo vestibulum" PhoneSecondary="Egestas vulputate nibh parturient nisi" Phone="Sed parturient" Source="Mollis gravida hac montes" Skype="Morbi parturient" Surname="Tristique lacus nec non" Title="Diam commodo conubia pharetra" Twitter="Mattis sed">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Adipiscing pulvinar ultricies" Country="Enim sagittis luctus senectus" Name="Placerat lorem magna vestibulum" ZipCode="Per eget elit"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Sapien faucibus morbi hendrerit" Description="Pretium vestibulum" Email="Laoreet dictumst facilisis class" EmailSecondary="Fringilla donec" Facebook="Cras parturient lorem" Fax="Parturient elementum bibendum" LinkedIn="Sed etiam facilisi primis rutrum" Mobile="Quis per lacinia velit vitae" MobileSecondary="Curae ornare urna vestibulum vestibulum" NoMail="False" Name="Convallis leo" PhoneSecondary="Eleifend natoque fermentum nostra" Phone="Quam risus" Source="Duis nunc vestibulum" Skype="Habitasse posuere platea adipiscing" Surname="Vehicula mus" Title="Dignissim vestibulum vestibulum" Twitter="Fusce potenti">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Maecenas purus praesent orci accumsan" Country="Pede iaculis" Name="Nec volutpat porta" ZipCode="Adipiscing non odio"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+			</CRM1:Tag.Contacts>
+			<CRM1:Tag.Id>
+				<System:Guid/>
+			</CRM1:Tag.Id>
+			<CRM1:Tag.RepositoryId>
+				<System:Guid/>
+			</CRM1:Tag.RepositoryId>
+			<CRM1:Tag.Version>
+				<System:Guid/>
+			</CRM1:Tag.Version>
+		</CRM1:Tag>
+		<CRM1:Tag Color="Semper imperdiet sociis amet nulla" LastUpdate="07/30/2015 13:28:53" Name="Sem habitant himenaeos inceptos">
+			<CRM1:Tag.Contacts>
+				<CRM1:Contact Comments="Lorem vestibulum" Description="Lacus parturient tortor pulvinar sagittis" Email="Sed dis eros est aliquam" EmailSecondary="Parturient porttitor" Facebook="Nisi tempus nisl nunc" Fax="Dolor enim quisque" LinkedIn="Ipsum vestibulum blandit ultricies justo" Mobile="Erat vivamus" MobileSecondary="Penatibus aliquet nibh" NoMail="True" Name="Sit taciti adipiscing" PhoneSecondary="Fames adipiscing felis" Phone="Nam elit aliquam integer tempor" Source="Vestibulum turpis" Skype="Tincidunt vestibulum tristique" Surname="Interdum rhoncus" Title="Sodales ante vel" Twitter="Pharetra adipiscing placerat hac">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Diam lobortis viverra malesuada" Country="Eget nascetur" Name="Parturient proin augue" ZipCode="Vestibulum arcu tellus vestibulum"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Praesent parturient cras" Description="Quis feugiat urna" Email="Suscipit torquent" EmailSecondary="Vehicula euismod" Facebook="Auctor vestibulum vestibulum adipiscing" Fax="Phasellus odio per" LinkedIn="Porta quam" Mobile="Egestas sed adipiscing parturient" MobileSecondary="Pede adipiscing parturient" NoMail="False" Name="Magna venenatis" PhoneSecondary="Vestibulum vestibulum ultrices orci" Phone="Curabitur non mauris dapibus" Source="Duis congue" Skype="Volutpat nullam maecenas" Surname="Vulputate massa adipiscing" Title="Senectus varius leo metus" Twitter="Aptent sem consequat purus">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Netus nec cubilia vestibulum" Country="Nulla vestibulum" Name="Sociosqu commodo conubia parturient" ZipCode="Morbi mus aenean neque"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Adipiscing hendrerit" Description="Fringilla habitasse" Email="Curae leo vestibulum" EmailSecondary="Habitant facilisis" Facebook="Sodales fusce" Fax="Posuere hac facilisi potenti" LinkedIn="Fermentum luctus inceptos elit vestibulum" Mobile="Arcu diam" MobileSecondary="Vestibulum adipiscing donec litora" NoMail="True" Name="Gravida sit accumsan" PhoneSecondary="Faucibus mus ligula" Phone="Elementum ante est" Source="Lobortis nec enim" Skype="Parturient pretium etiam eget" Surname="Cursus dictum risus" Title="Iaculis convallis velit vel lectus" Twitter="Rhoncus vestibulum interdum magnis">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Sed bibendum lacinia class" Country="Laoreet natoque dictumst eleifend dis" Name="Nunc amet vitae nam" ZipCode="Dignissim libero"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Vestibulum ipsum phasellus" Description="Blandit urna" Email="Aliquam tristique augue dolor" EmailSecondary="Venenatis aliquet vulputate nam vestibulum" Facebook="Curabitur montes vestibulum" Fax="Senectus sociosqu" LinkedIn="Felis sed quam parturient" Mobile="Porttitor integer quisque vivamus tincidunt" MobileSecondary="Vel fames" NoMail="False" Name="Nascetur himenaeos viverra lorem pharetra" PhoneSecondary="Ultricies suscipit pede torquent ultrices" Phone="Odio orci proin sagittis sit" Source="Volutpat nostra" Skype="Adipiscing vehicula" Surname="Non mattis placerat erat" Title="Eros parturient morbi imperdiet" Twitter="Quis mollis">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Nisl penatibus" Country="Sed nunc nulla aliquam sem" Name="Pulvinar malesuada mauris nibh nisi" ZipCode="Vestibulum per"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Tempus tortor porta vestibulum turpis" Description="Inceptos natoque nulla" Email="Mus metus gravida" EmailSecondary="Taciti lacinia ante" Facebook="Netus tempor non himenaeos imperdiet" Fax="Hac nunc rutrum habitasse leo" LinkedIn="Adipiscing parturient habitant" Mobile="Sapien semper hendrerit" MobileSecondary="Morbi iaculis vestibulum sociis vestibulum" NoMail="True" Name="Justo cras adipiscing ornare lacus" PhoneSecondary="Nec dictumst amet" Phone="Fermentum fringilla feugiat" Source="Eget purus per elit" Skype="Eleifend facilisi faucibus arcu" Surname="Commodo dis consequat platea" Title="Est convallis conubia duis lorem" Twitter="Tellus diam laoreet neque">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Accumsan cubilia dapibus elementum egestas" Country="Massa facilisis bibendum euismod" Name="Maecenas praesent" ZipCode="Parturient dignissim magna primis"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+			</CRM1:Tag.Contacts>
+			<CRM1:Tag.Id>
+				<System:Guid/>
+			</CRM1:Tag.Id>
+			<CRM1:Tag.RepositoryId>
+				<System:Guid/>
+			</CRM1:Tag.RepositoryId>
+			<CRM1:Tag.Version>
+				<System:Guid/>
+			</CRM1:Tag.Version>
+		</CRM1:Tag>
+		<CRM1:Tag Color="Sed vestibulum" LastUpdate="07/30/2015 13:28:53" Name="Malesuada enim penatibus risus">
+			<CRM1:Tag.Contacts>
+				<CRM1:Contact Comments="Nunc consequat" Description="Fusce torquent per" Email="Vulputate placerat" EmailSecondary="Phasellus viverra sagittis aptent senectus" Facebook="Suscipit non nisl" Fax="Pharetra hac" LinkedIn="Nisi vestibulum sociosqu vestibulum" Mobile="Donec rhoncus sodales leo" MobileSecondary="Etiam curabitur eros adipiscing pulvinar" NoMail="False" Name="Varius interdum sem adipiscing posuere" PhoneSecondary="Mus vestibulum" Phone="Potenti parturient nullam pretium vestibulum" Source="Ultrices odio parturient cursus" Skype="Aliquam auctor nibh parturient nec" Surname="Aenean sit lobortis erat" Title="Vel porttitor velit tincidunt" Twitter="Adipiscing congue">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Dis ultricies" Country="Class venenatis curae est" Name="Vitae tristique" ZipCode="Nam nascetur mauris sed"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Aliquet faucibus" Description="Dolor facilisi" Email="Quisque vivamus nam" EmailSecondary="Leo accumsan" Facebook="Augue eleifend vestibulum arcu diam" Fax="Facilisis adipiscing integer parturient" LinkedIn="Nunc bibendum mus habitasse hendrerit" Mobile="Praesent nulla vestibulum fermentum" MobileSecondary="Dis est hac" NoMail="True" Name="Orci vehicula" PhoneSecondary="Sed proin" Phone="Vel libero maecenas" Source="Eget elit fames adipiscing" Skype="Fringilla duis aliquam" Surname="Vestibulum pede convallis" Title="Volutpat quam sed" Twitter="Dictumst ligula litora amet ante">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Lectus morbi" Country="Cras sit elementum" Name="Quis sem dignissim dictum" ZipCode="Urna vestibulum lorem"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Venenatis platea dapibus" Description="Pulvinar vestibulum sed quam ultricies" Email="Interdum netus" EmailSecondary="Conubia parturient lobortis cubilia" Facebook="Nostra ornare pede" Fax="Sed neque porttitor" LinkedIn="Pharetra vestibulum nam" Mobile="Tincidunt vestibulum adipiscing" MobileSecondary="Sem sit mattis tristique" NoMail="False" Name="Enim himenaeos nec" PhoneSecondary="Odio magnis orci" Phone="Morbi nisl nunc" Source="Quis urna nulla" Skype="Nascetur vel" Surname="Felis ipsum non per" Title="Erat justo eros nibh" Twitter="Mauris mollis montes placerat">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Lorem magna luctus imperdiet" Country="Massa metus vestibulum malesuada penatibus" Name="Habitant lacus" ZipCode="Blandit nisi parturient inceptos commodo"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Parturient elit facilisis vestibulum" Description="Sit aptent adipiscing auctor" Email="Mus consequat nec" EmailSecondary="Feugiat vestibulum vestibulum class sed" Facebook="Volutpat mauris sem nullam" Fax="Tempus leo velit" LinkedIn="Ultrices gravida vehicula varius" Mobile="Tortor suscipit vitae" MobileSecondary="Ante non euismod per parturient" NoMail="True" Name="Primis vulputate cras" PhoneSecondary="Torquent egestas" Phone="Adipiscing amet hac sociosqu" Source="Maecenas fermentum enim erat iaculis" Skype="Arcu diam convallis eget turpis" Surname="Rutrum sagittis" Title="Adipiscing sapien porta parturient dis" Twitter="Dignissim elementum aenean">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Risus taciti tellus vestibulum vestibulum" Country="Senectus nunc tempor est" Name="Curabitur semper" ZipCode="Duis purus sociis phasellus"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Rhoncus sodales faucibus" Description="Pretium etiam facilisi montes nostra" Email="Natoque mattis" EmailSecondary="Hac vestibulum himenaeos odio mauris" Facebook="Non per" Fax="Nisl vestibulum" LinkedIn="Imperdiet leo adipiscing mollis" Mobile="Luctus adipiscing magnis bibendum" MobileSecondary="Est nunc" NoMail="False" Name="Congue vel eros" PhoneSecondary="Dis parturient hendrerit posuere dictumst" Phone="Ligula litora parturient vestibulum" Source="Viverra parturient vestibulum sed" Skype="Vestibulum eleifend potenti" Surname="Praesent lacinia" Title="Curae vestibulum" Twitter="Mus nec">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Habitasse lectus nam" Country="Sed libero" Name="Cursus nibh donec laoreet" ZipCode="Dictum nisi accumsan adipiscing fringilla"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+			</CRM1:Tag.Contacts>
+			<CRM1:Tag.Id>
+				<System:Guid/>
+			</CRM1:Tag.Id>
+			<CRM1:Tag.RepositoryId>
+				<System:Guid/>
+			</CRM1:Tag.RepositoryId>
+			<CRM1:Tag.Version>
+				<System:Guid/>
+			</CRM1:Tag.Version>
+		</CRM1:Tag>
+		<CRM1:Tag Color="Penatibus sit ornare habitant lorem" LastUpdate="07/30/2015 13:28:53" Name="Malesuada orci pede sem fusce">
+			<CRM1:Tag.Contacts>
+				<CRM1:Contact Comments="Nec cubilia lorem" Description="Lacus conubia" Email="Urna fames semper" EmailSecondary="Parturient est sagittis hac" Facebook="Felis ipsum justo" Fax="Quis pharetra placerat" LinkedIn="Senectus duis mus vestibulum sociosqu" Mobile="Parturient vestibulum vestibulum tristique" MobileSecondary="Adipiscing ultricies" NoMail="True" Name="Aliquam vel platea primis integer" PhoneSecondary="Pulvinar cras" Phone="Sed quam dis nascetur dolor" Source="Torquent vulputate dapibus ultrices adipiscing" Skype="Sociis leo commodo" Surname="Porttitor quisque morbi" Title="Vivamus nulla vestibulum adipiscing proin" Twitter="Venenatis vestibulum suscipit">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Sapien vestibulum blandit interdum" Country="Lobortis vestibulum adipiscing" Name="Augue parturient inceptos tincidunt aliquam" ZipCode="Rutrum nam aliquet"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Parturient dictumst dis est hac" Description="Netus nam bibendum sed nulla" Email="Diam maecenas iaculis" EmailSecondary="Eget praesent habitasse" Facebook="Varius elit vestibulum adipiscing posuere" Fax="Neque fermentum sit arcu vestibulum" LinkedIn="Vel laoreet" Mobile="Tempus volutpat tortor" MobileSecondary="Fringilla vestibulum" NoMail="False" Name="Magna non" PhoneSecondary="Vestibulum adipiscing parturient" Phone="Elementum tempor facilisis" Source="Porta vestibulum potenti purus" Skype="Hendrerit lacinia" Surname="Massa taciti" Title="Curabitur phasellus parturient consequat" Twitter="Accumsan natoque turpis himenaeos">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Amet ante dignissim tellus sed" Country="Sem morbi" Name="Metus nunc egestas euismod convallis" ZipCode="Feugiat gravida vehicula per"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Orci proin" Description="Nulla adipiscing tristique aptent senectus" Email="Vestibulum malesuada nec" EmailSecondary="Mauris porttitor parturient lorem" Facebook="Vestibulum nullam aliquam sagittis" Fax="Lobortis nascetur aenean" LinkedIn="Tincidunt per" Mobile="Pharetra viverra nisl etiam nunc" MobileSecondary="Placerat penatibus" NoMail="True" Name="Enim vestibulum eleifend erat adipiscing" PhoneSecondary="Adipiscing fusce aliquam" Phone="Interdum donec mus" Source="Augue sociosqu auctor" Skype="Non integer vestibulum" Surname="Facilisi leo" Title="Faucibus risus eros nibh" Twitter="Odio quisque pulvinar morbi vivamus">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Inceptos parturient" Country="Sodales vestibulum curae imperdiet" Name="Velit habitant pretium rhoncus" ZipCode="Nisi vitae class"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Facilisis feugiat neque" Description="Vel diam metus morbi nam" Email="Lacus convallis duis" EmailSecondary="Lorem amet dignissim" Facebook="Sit facilisi vestibulum" Fax="Vulputate vestibulum praesent curabitur cursus" LinkedIn="Egestas euismod parturient elementum sem" Mobile="Conubia phasellus consequat" MobileSecondary="Dictumst nunc" NoMail="False" Name="Pede dolor congue fames" PhoneSecondary="Accumsan adipiscing bibendum cubilia" Phone="Urna maecenas parturient vestibulum cras" Source="Fermentum fringilla faucibus habitasse hendrerit" Skype="Magna dapibus eleifend dictum massa" Surname="Ultricies quam parturient" Title="Vestibulum suscipit" Twitter="Ante arcu">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Adipiscing ipsum venenatis" Country="Blandit justo commodo" Name="Sed vestibulum quis torquent" ZipCode="Ultrices vehicula felis aliquet volutpat"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Purus dignissim sem" Description="Convallis mattis placerat vestibulum sed" Email="Parturient hac" EmailSecondary="Adipiscing curabitur luctus" Facebook="Posuere parturient per" Fax="Tristique lobortis iaculis ultricies" LinkedIn="Nibh consequat nec laoreet" Mobile="Nascetur eros" MobileSecondary="Venenatis vulputate" NoMail="True" Name="Himenaeos vestibulum sed" PhoneSecondary="Pharetra litora vestibulum vestibulum" Phone="Adipiscing erat est tincidunt porta" Source="Nunc sit potenti pulvinar" Skype="Leo phasellus lacinia mus" Surname="Lectus habitant dis" Title="Imperdiet eget netus nulla libero" Twitter="Non nisi magnis nisl natoque">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Elit inceptos vestibulum interdum" Country="Enim penatibus gravida ligula porttitor" Name="Malesuada adipiscing" ZipCode="Parturient vestibulum"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+			</CRM1:Tag.Contacts>
+			<CRM1:Tag.Id>
+				<System:Guid/>
+			</CRM1:Tag.Id>
+			<CRM1:Tag.RepositoryId>
+				<System:Guid/>
+			</CRM1:Tag.RepositoryId>
+			<CRM1:Tag.Version>
+				<System:Guid/>
+			</CRM1:Tag.Version>
+		</CRM1:Tag>
+		<CRM1:Tag Color="Adipiscing pretium odio" LastUpdate="07/30/2015 13:28:53" Name="Risus vestibulum sagittis mauris">
+			<CRM1:Tag.Contacts>
+				<CRM1:Contact Comments="Diam parturient sociis" Description="Rutrum sapien aliquet arcu semper" Email="Suscipit himenaeos fusce adipiscing" EmailSecondary="Imperdiet ultrices" Facebook="Platea sed adipiscing primis" Fax="Donec duis viverra nam etiam" LinkedIn="Nunc vestibulum amet ornare" Mobile="Vestibulum nostra hendrerit vestibulum aliquam" MobileSecondary="Integer lorem" NoMail="False" Name="Orci pede" PhoneSecondary="Torquent parturient" Phone="Cras curae montes" Source="Volutpat blandit commodo" Skype="Vehicula quisque vestibulum morbi" Surname="Quam senectus elementum rhoncus quis" Title="Sociosqu parturient mollis facilisis urna" Twitter="Ante vivamus nulla aliquam">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Adipiscing class" Country="Habitasse vel sodales parturient" Name="Fermentum vestibulum fringilla" ZipCode="Vestibulum velit vitae"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Cras parturient nec ultricies potenti" Description="Mus urna habitant aenean" Email="Ipsum facilisi odio" EmailSecondary="Quam lorem tempor lacinia laoreet" Facebook="Tristique posuere varius" Fax="Euismod feugiat" LinkedIn="Quis tortor turpis" Mobile="Dictumst eleifend" MobileSecondary="Tellus orci lacus pede iaculis" NoMail="True" Name="Taciti eget elit" PhoneSecondary="Hac gravida faucibus justo porttitor" Phone="Nisl penatibus bibendum nunc egestas" Source="Inceptos pretium vestibulum rhoncus" Skype="Leo tempus" Surname="Vestibulum conubia proin maecenas praesent" Title="Accumsan enim erat vestibulum augue" Twitter="Adipiscing natoque tincidunt">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Eros felis nibh" Country="Est nisi dapibus" Name="Malesuada dis" ZipCode="Cubilia dolor fames"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Lectus adipiscing eros" Description="Dis erat vestibulum sagittis elementum" Email="Quisque auctor sem risus sit" EmailSecondary="Nam amet ante consequat parturient" Facebook="Elit enim" Fax="Duis viverra" LinkedIn="Arcu diam congue vestibulum eget" Mobile="Vestibulum adipiscing aliquam integer pharetra" MobileSecondary="Placerat vel" NoMail="False" Name="Venenatis vestibulum" PhoneSecondary="Nunc velit" Phone="Nascetur phasellus porta purus" Source="Nibh facilisis fermentum libero" Skype="Convallis vivamus sed dignissim pulvinar" Surname="Adipiscing magna interdum sodales massa" Title="Vulputate non per mauris" Twitter="Cursus dictum vitae">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Curabitur vestibulum lobortis" Country="Netus nulla sed" Name="Metus nullam" ZipCode="Parturient morbi neque aptent"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Vestibulum adipiscing" Description="Nunc mollis porttitor cubilia tincidunt" Email="Imperdiet conubia" EmailSecondary="Pede per" Facebook="Cras duis vestibulum augue" Fax="Adipiscing etiam parturient" LinkedIn="Lorem quis morbi" Mobile="Nec vestibulum" MobileSecondary="Vestibulum adipiscing suscipit orci" NoMail="True" Name="Senectus class parturient ligula sociosqu" PhoneSecondary="Odio non malesuada penatibus" Phone="Blandit mus commodo" Source="Parturient dapibus" Skype="Quam fusce" Surname="Litora curae luctus est vestibulum" Title="Hac fringilla donec" Twitter="Mauris nulla urna parturient proin">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Aliquet himenaeos nisl" Country="Mattis leo vestibulum nunc" Name="Magnis nisi aliquam" ZipCode="Habitasse hendrerit"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Potenti nibh dis maecenas lacus" Description="Sed sapien" Email="Eget elit vulputate platea enim" EmailSecondary="Curabitur parturient" Facebook="Parturient vestibulum posuere" Fax="Laoreet ante" LinkedIn="Erat vestibulum volutpat" Mobile="Arcu ornare diam" MobileSecondary="Natoque vel" NoMail="False" Name="Vestibulum vestibulum egestas sed adipiscing" PhoneSecondary="Vehicula felis primis" Phone="Sit lacinia ultrices" Source="Vestibulum praesent accumsan" Skype="Ipsum nam" Surname="Euismod tristique" Title="Montes dolor parturient" Twitter="Rutrum vestibulum adipiscing justo eros">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Venenatis vestibulum" Country="Iaculis nostra adipiscing" Name="Ultricies sem amet torquent" ZipCode="Fames feugiat vestibulum gravida"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+			</CRM1:Tag.Contacts>
+			<CRM1:Tag.Id>
+				<System:Guid/>
+			</CRM1:Tag.Id>
+			<CRM1:Tag.RepositoryId>
+				<System:Guid/>
+			</CRM1:Tag.RepositoryId>
+			<CRM1:Tag.Version>
+				<System:Guid/>
+			</CRM1:Tag.Version>
+		</CRM1:Tag>
+		<CRM1:Tag Color="Pretium nisi nisl consequat" LastUpdate="07/30/2015 13:28:53" Name="Adipiscing semper lorem est phasellus">
+			<CRM1:Tag.Contacts>
+				<CRM1:Contact Comments="Adipiscing parturient" Description="Per inceptos sed sem interdum" Email="Tempor cras tempus duis" EmailSecondary="Integer turpis vestibulum quisque facilisi" Facebook="Varius non" Fax="Mus nulla quam adipiscing quis" LinkedIn="Vivamus amet habitant nec" Mobile="Urna parturient porta" MobileSecondary="Tortor hendrerit dictumst eleifend" NoMail="True" Name="Convallis rhoncus bibendum hac" PhoneSecondary="Habitasse nunc" Phone="Aliquam neque netus" Source="Himenaeos lobortis imperdiet aenean" Skype="Vestibulum faucibus purus risus" Surname="Magna dignissim parturient elementum" Title="Nunc sociis facilisis" Twitter="Velit aliquam">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Sodales taciti tellus vestibulum" Country="Viverra metus morbi" Name="Leo odio fermentum vestibulum" ZipCode="Orci massa fringilla pede"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Maecenas iaculis venenatis vulputate" Description="Leo mus nec libero ultricies" Email="Enim sociosqu vestibulum vestibulum aptent" EmailSecondary="Porttitor fusce torquent dictum ultrices" Facebook="Lectus tristique volutpat hac" Fax="Cubilia dapibus adipiscing egestas nam" LinkedIn="Morbi nulla gravida" Mobile="Senectus parturient elit" MobileSecondary="Euismod congue cursus" NoMail="False" Name="Nascetur vitae" PhoneSecondary="Sed auctor etiam suscipit dis" Phone="Vel donec eget" Source="Augue lacinia parturient praesent accumsan" Skype="Erat feugiat vehicula tincidunt lorem" Surname="Aliquet pharetra" Title="Placerat blandit vestibulum malesuada" Twitter="Eros est adipiscing proin">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Nullam arcu" Country="Sagittis sit diam conubia curae" Name="Mauris commodo pulvinar ante class" ZipCode="Penatibus vestibulum"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Pulvinar nulla sagittis" Description="Netus parturient primis placerat" Email="Mauris convallis inceptos" EmailSecondary="Vestibulum dignissim nisl nostra" Facebook="Neque platea adipiscing" Fax="Vestibulum mattis adipiscing consequat sed" LinkedIn="Odio facilisis sit pretium vel" Mobile="Parturient habitant lorem vestibulum" MobileSecondary="Mollis interdum lobortis montes nascetur" NoMail="True" Name="Dolor fames" PhoneSecondary="Nisi sem magna massa" Phone="Magnis phasellus nibh faucibus per" Source="Rutrum porta" Skype="Metus potenti elementum nunc" Surname="Non felis" Title="Laoreet ipsum natoque justo" Twitter="Ornare nam morbi pharetra">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Litora lacus luctus" Country="Dictumst eleifend facilisi" Name="Ligula posuere" ZipCode="Bibendum curabitur vestibulum"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Morbi tortor nec diam" Description="Aliquet blandit tempor tempus" Email="Urna aliquam integer curae hendrerit" EmailSecondary="Himenaeos adipiscing" Facebook="Vestibulum vestibulum tellus arcu" Fax="Hac class viverra habitasse" LinkedIn="Parturient amet" Mobile="Leo parturient sociis vestibulum" MobileSecondary="Vivamus mus vestibulum cras duis" NoMail="False" Name="Vestibulum orci rhoncus purus risus" PhoneSecondary="Taciti donec quisque etiam" Phone="Quis sodales vitae" Source="Malesuada nulla proin penatibus" Skype="Aliquam nunc" Surname="Vestibulum senectus" Title="Fermentum sapien sociosqu semper adipiscing" Twitter="Fusce ante imperdiet lorem volutpat">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Sed dis" Country="Vehicula quam est fringilla velit" Name="Pede suscipit" ZipCode="Torquent ultrices"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Justo vestibulum interdum" Description="Inceptos gravida orci" Email="Fames consequat dictumst" EmailSecondary="Felis facilisi" Facebook="Odio parturient fermentum" Fax="Vestibulum venenatis vulputate curabitur accumsan" LinkedIn="Vestibulum nunc aptent elementum adipiscing" Mobile="Phasellus bibendum" MobileSecondary="Nibh convallis nisi dignissim eleifend" NoMail="True" Name="Turpis varius porttitor eget commodo" PhoneSecondary="Sem eros" Phone="Sed egestas euismod" Source="Auctor lobortis vestibulum congue" Skype="Mauris nisl faucibus nullam ipsum" Surname="Elit tincidunt conubia cubilia" Title="Augue adipiscing non" Twitter="Sit facilisis habitant feugiat vel">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Ultricies aenean parturient" Country="Dolor praesent" Name="Enim dapibus" ZipCode="Per tristique erat maecenas"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+			</CRM1:Tag.Contacts>
+			<CRM1:Tag.Id>
+				<System:Guid/>
+			</CRM1:Tag.Id>
+			<CRM1:Tag.RepositoryId>
+				<System:Guid/>
+			</CRM1:Tag.RepositoryId>
+			<CRM1:Tag.Version>
+				<System:Guid/>
+			</CRM1:Tag.Version>
+		</CRM1:Tag>
+		<CRM1:Tag Color="Nascetur cursus dictum quam lorem" LastUpdate="07/30/2015 13:28:53" Name="Nam lacus pede">
+			<CRM1:Tag.Contacts>
+				<CRM1:Contact Comments="Vehicula nec malesuada volutpat" Description="Mus amet platea ultrices rhoncus" Email="Vestibulum hendrerit potenti mollis" EmailSecondary="Nostra hac duis" Facebook="Nunc torquent risus pretium" Fax="Senectus magnis mattis morbi mauris" LinkedIn="Adipiscing leo parturient purus" Mobile="Sociosqu parturient posuere neque habitasse" MobileSecondary="Netus nulla porta" NoMail="False" Name="Quis lectus libero adipiscing" PhoneSecondary="Vestibulum montes" Phone="Adipiscing sagittis luctus natoque" Source="Sodales parturient vestibulum viverra" Skype="Himenaeos suscipit" Surname="Iaculis magna" Title="Fringilla ligula" Twitter="Ornare vestibulum vestibulum adipiscing imperdiet">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Sed vestibulum pulvinar litora dis" Country="Metus vestibulum est laoreet" Name="Pharetra parturient massa" ZipCode="Placerat urna lacinia cras"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Morbi pharetra" Description="Phasellus nascetur lorem" Email="Sem class tristique faucibus curae" EmailSecondary="Vestibulum tempor donec eget interdum" Facebook="Enim adipiscing curabitur erat" Fax="Facilisi parturient" LinkedIn="Elit etiam blandit" Mobile="Diam vivamus" MobileSecondary="Inceptos ultricies aliquet venenatis vulputate" NoMail="True" Name="Ante aliquam primis non" PhoneSecondary="Tellus habitant aliquam sit" Phone="Tincidunt sociis taciti" Source="Cubilia dapibus eros" Skype="Lobortis vel" Surname="Integer quisque maecenas" Title="Praesent rutrum velit accumsan bibendum" Twitter="Vestibulum commodo conubia fusce nam">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Eleifend adipiscing vitae" Country="Sed porttitor" Name="Arcu sapien penatibus per vestibulum" ZipCode="Semper dictumst"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Fringilla parturient lacinia laoreet" Description="Sit vel urna auctor" Email="Fames odio felis gravida" EmailSecondary="Vehicula orci sed vestibulum volutpat" Facebook="Adipiscing aptent fermentum" Fax="Senectus nec sociosqu suscipit" LinkedIn="Pede quam" Mobile="Nunc varius augue feugiat dolor" MobileSecondary="Torquent ultrices mauris" NoMail="False" Name="Consequat placerat parturient" PhoneSecondary="Iaculis non per aenean" Phone="Sagittis parturient proin leo mus" Source="Justo habitasse congue" Skype="Maecenas facilisis ipsum praesent" Surname="Nibh pulvinar nisi" Title="Sed convallis dis" Twitter="Nullam quis vestibulum sem">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Hac nulla dignissim" Country="Elementum vestibulum tortor turpis adipiscing" Name="Est egestas" ZipCode="Nisl euismod tempus vestibulum"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Parturient ante" Description="Purus inceptos amet aliquet per" Email="Eleifend aliquam integer" EmailSecondary="Nunc aliquam" Facebook="Porta nec non adipiscing" Fax="Duis morbi" LinkedIn="Tristique litora ultricies neque" Mobile="Leo adipiscing malesuada parturient vestibulum" MobileSecondary="Vivamus ligula" NoMail="True" Name="Hendrerit lacus lorem accumsan natoque" PhoneSecondary="Quisque vestibulum penatibus porttitor" Phone="Hac metus" Source="Arcu sed blandit" Skype="Facilisi tincidunt" Surname="Cursus dictum nam bibendum" Title="Vestibulum lectus posuere vestibulum" Twitter="Netus nulla faucibus habitant mus">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Pretium est rhoncus sodales" Country="Dictumst viverra magna massa libero" Name="Himenaeos sed cras" ZipCode="Imperdiet dis potenti"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+				<CRM1:Contact Comments="Convallis vestibulum dignissim lorem nostra" Description="Leo mus nec suscipit" Email="Feugiat gravida pulvinar curabitur sagittis" EmailSecondary="Lacinia senectus parturient sociosqu" Facebook="Consequat nisl" Fax="Vitae vestibulum" LinkedIn="Est mollis nisi laoreet" Mobile="Sed placerat" MobileSecondary="Iaculis dis nibh curae donec" NoMail="False" Name="Sem vestibulum diam venenatis" PhoneSecondary="Class eros mattis adipiscing" Phone="Magnis erat" Source="Non nunc torquent posuere" Skype="Phasellus mauris etiam vestibulum" Surname="Interdum sit vel" Title="Eget lobortis nascetur" Twitter="Montes hac fusce natoque">
+					<CRM1:Contact.Address>
+						<CRM1:Address City="Dapibus elit enim egestas velit" Country="Luctus euismod nam" Name="Risus commodo" ZipCode="Vulputate conubia pharetra cubilia"/>
+					</CRM1:Contact.Address>
+					<CRM1:Contact.Id>
+						<System:Guid/>
+					</CRM1:Contact.Id>
+				</CRM1:Contact>
+			</CRM1:Tag.Contacts>
+			<CRM1:Tag.Id>
+				<System:Guid/>
+			</CRM1:Tag.Id>
+			<CRM1:Tag.RepositoryId>
+				<System:Guid/>
+			</CRM1:Tag.RepositoryId>
+			<CRM1:Tag.Version>
+				<System:Guid/>
+			</CRM1:Tag.Version>
+		</CRM1:Tag>
+	</CRM:TagListViewModel.Tags>
+</CRM:TagListViewModel>

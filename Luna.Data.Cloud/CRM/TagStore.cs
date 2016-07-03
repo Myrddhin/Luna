@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 using Luna.Model;
@@ -20,10 +19,9 @@ namespace Luna.Data.Cloud.CRM
 
         public async Task<DateTime> LastModified(Guid repositoryId)
         {
-            string apiRoot = string.Format(CultureInfo.InvariantCulture, "{0}/repository/{1}/tags/lastmodified", Requester.ApiRoot, repositoryId);
-            var message = new HttpRequestMessage(HttpMethod.Get, apiRoot);
+            string address = string.Format(CultureInfo.InvariantCulture, "/repository/{0}/tags/lastmodified", repositoryId);
 
-            return await this.GetScalarFromCloud<DateTime>(message);
+            return await GetScalarFromCloud<DateTime>(address);
         }
 
         public async Task<IEnumerable<Tag>> GetAllAsync(Guid repositoryId)
@@ -33,27 +31,38 @@ namespace Luna.Data.Cloud.CRM
 
         public async Task<Tag> GetAsync(Guid repositoryId, Guid id)
         {
-            string apiRoot = string.Format(CultureInfo.InvariantCulture, "{0}/repository/{1}/tags", Requester.ApiRoot, repositoryId);
-            var request = new HttpRequestMessage(HttpMethod.Get, apiRoot + "/" + id.ToString());
-            return await this.GetItemFromCloud(request);
+            string address = string.Format(CultureInfo.InvariantCulture, "/repository/{0}/tags/{1}", repositoryId, id);
+            return await GetItemFromCloud(address);
         }
 
         public async Task<IEnumerable<Tag>> GetAllAsync(Guid repositoryId, DateTime refreshDate)
         {
-            string apiRoot = string.Format(
+            string address = string.Format(
                 CultureInfo.InvariantCulture,
-                "{0}/repository/{1}/tags",
-                Requester.ApiRoot,
-                repositoryId);
-            var request = new HttpRequestMessage(
-                HttpMethod.Get,
-                apiRoot + "/?date=" + WebUtility.UrlEncode(refreshDate.ToUniversalTime().ToString("o")));
-            return await this.GetListFromCloud(request);
+                "/repository/{0}/tags/?date={1}",
+                repositoryId,
+                WebUtility.UrlEncode(refreshDate.ToUniversalTime().ToString("o")));
+            return await GetListFromCloud(address);
         }
 
-        public Task SaveAsync(Tag item)
+        public async Task SaveAsync(Guid repositoryId, Tag item)
         {
-            throw new NotImplementedException();
+            string address = string.Format(
+                  CultureInfo.InvariantCulture,
+                  "/repository/{0}/tags",
+                  repositoryId);
+            await SaveItemToCloud(address, item);
+        }
+
+        public async Task DeleteAsync(Guid repositoryId, Guid id)
+        {
+            string address = string.Format(
+                  CultureInfo.InvariantCulture,
+                  "/repository/{0}/tags/{1}",
+                  repositoryId,
+                  id);
+
+            await DeleteItemToCloud(address);
         }
     }
 }

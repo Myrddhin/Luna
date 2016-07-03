@@ -3,7 +3,6 @@ using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Luna.Model;
-using Microsoft.IdentityModel.Clients.ActiveDirectory;
 
 namespace Luna.Data.Cloud
 {
@@ -37,6 +36,17 @@ namespace Luna.Data.Cloud
             client = new HttpClient { Timeout = new TimeSpan(0, 0, 10) };
         }
 
+        private void CheckAuth()
+        {
+            //AuthenticationContext ac = new AuthenticationContext(ADUrl, TokenCache);
+            //AuthenticationResult ar = ac.AcquireToken(ApiUri, LunaID, new Uri(LunaReturnUrl));
+
+            // Call Web API
+            //string authHeader = ar.CreateAuthorizationHeader();
+
+            //client.DefaultRequestHeaders.Authorization = authHeader;
+        }
+
         public bool CheckNet()
         {
             System.Net.NetworkInformation.Ping ping = new System.Net.NetworkInformation.Ping();
@@ -53,16 +63,28 @@ namespace Luna.Data.Cloud
             }
         }
 
-        public async Task<HttpResponseMessage> Send(HttpRequestMessage message)
+        public async Task<HttpResponseMessage> GetAsync(Uri uri)
         {
-            //AuthenticationContext ac = new AuthenticationContext(ADUrl, TokenCache);
-            //AuthenticationResult ar = ac.AcquireToken(ApiUri, LunaID, new Uri(LunaReturnUrl));
+            CheckAuth();
+            return await client.GetAsync(uri);
+        }
 
-            // Call Web API
-            //string authHeader = ar.CreateAuthorizationHeader();
+        public async Task<HttpResponseMessage> PostAsync<T>(Uri uri, T content)
+        {
+            CheckAuth();
+            return await client.PutAsJsonAsync(uri, content);
+        }
 
-            //message.Headers.TryAddWithoutValidation("Authorization", authHeader);
-            return await client.SendAsync(message);
+        public async Task<HttpResponseMessage> PutAsync<T>(Uri uri, T content)
+        {
+            CheckAuth();
+            return await client.PutAsJsonAsync(uri, content);
+        }
+
+        public async Task<HttpResponseMessage> DeleteAsync(Uri uri)
+        {
+            CheckAuth();
+            return await client.DeleteAsync(uri);
         }
 
         protected override void Dispose(bool disposing)

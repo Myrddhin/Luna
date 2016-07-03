@@ -86,8 +86,8 @@ CREATE TABLE `Tags` (
 ");
             buffer.Enqueue(@"
 CREATE TABLE `R_Contacts_Tags` (
-    `Id_contact`	GUID NOT NULL,
-    `Id_tag`	GUID NOT NULL
+    `id_contact`	GUID NOT NULL,
+    `id_tag`	GUID NOT NULL
 );
 ");
 

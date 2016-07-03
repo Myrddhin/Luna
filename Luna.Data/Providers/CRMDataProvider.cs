@@ -23,22 +23,25 @@ namespace Luna.Data.CRM
                 IEnumerable<Tag> modifiedOnline = new List<Tag>();
                 IEnumerable<Tag> modifiedLocal = new List<Tag>();
 
+                var currentRepo = State.ActiveRepository.Id;
+
                 if (!DataContext.Tags.Any())
                 {
-                    modifiedOnline = await TagStore.GetAllAsync(State.ActiveRepository.Id);
+                    modifiedOnline = await TagStore.GetAllAsync(currentRepo);
                 }
                 else
                 {
                     DateTime maxLocal = await DataContext.Tags.MaxAsync(x => x.LastUpdate);
-                    DateTime maxCloud = await TagStore.LastModified(State.ActiveRepository.Id);
+                    DateTime maxCloud = await TagStore.LastModified(currentRepo);
 
-                    modifiedOnline = await TagStore.GetAllAsync(State.ActiveRepository.Id, maxLocal);
+                    modifiedOnline = await TagStore.GetAllAsync(currentRepo, maxLocal);
                     modifiedLocal = DataContext.Tags.Where(x => x.LastUpdate > maxCloud);
                 }
 
                 foreach (var tag in modifiedLocal)
                 {
-                    await TagStore.SaveAsync(tag);
+                    tag.RepositoryId = currentRepo;
+                    await TagStore.SaveAsync(currentRepo, tag);
                 }
 
                 foreach (var item in modifiedOnline)
@@ -71,6 +74,7 @@ namespace Luna.Data.CRM
 
         public async Task SaveAsync(Tag tag)
         {
+            tag.RepositoryId = State.ActiveRepository.Id;
             await Save<Tag>(DataContext, DataContext.Tags, tag);
         }
 

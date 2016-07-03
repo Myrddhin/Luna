@@ -14,6 +14,6 @@ namespace Luna.Model
 
         Task<IEnumerable<TEntity>> GetAllAsync(Guid repositoryId, DateTime refreshDate);
 
-        Task SaveAsync(TEntity item);
+        Task SaveAsync(Guid repositoryId, TEntity item);
     }
 }

@@ -1,0 +1,263 @@
+2015-08-26 23:43:44,364 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - Opened connection at 26/08/2015 23:43:44 +02:00
+
+2015-08-26 23:43:44,385 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - 
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('meta.Repositories','meta.Subscriptions','meta.Users')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2015-08-26 23:43:44,385 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - 
+
+2015-08-26 23:43:44,386 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - -- Executing at 26/08/2015 23:43:44 +02:00
+
+2015-08-26 23:43:44,406 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - -- Completed in 19 ms with result: 3
+
+2015-08-26 23:43:44,407 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - 
+
+2015-08-26 23:43:44,407 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - Closed connection at 26/08/2015 23:43:44 +02:00
+
+2015-08-26 23:43:44,498 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - Opened connection at 26/08/2015 23:43:44 +02:00
+
+2015-08-26 23:43:44,585 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2015-08-26 23:43:44,585 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - 
+
+2015-08-26 23:43:44,585 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - -- p__linq__0: 'Luna.Cloud.Data.Meta.MetaDataContext' (Type = String, Size = 4000)
+
+2015-08-26 23:43:44,585 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - -- Executing at 26/08/2015 23:43:44 +02:00
+
+2015-08-26 23:43:44,777 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - -- Failed in 191 ms with error: Nom d'objet 'dbo.__MigrationHistory' non valide.
+
+2015-08-26 23:43:44,777 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - 
+
+2015-08-26 23:43:44,889 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - Closed connection at 26/08/2015 23:43:44 +02:00
+
+2015-08-26 23:43:44,953 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - Opened connection at 26/08/2015 23:43:44 +02:00
+
+2015-08-26 23:43:44,955 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+    )  AS [GroupBy1]
+2015-08-26 23:43:44,955 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - 
+
+2015-08-26 23:43:44,956 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - -- Executing at 26/08/2015 23:43:44 +02:00
+
+2015-08-26 23:43:45,094 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - -- Failed in 137 ms with error: Nom d'objet 'dbo.__MigrationHistory' non valide.
+
+2015-08-26 23:43:45,094 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - 
+
+2015-08-26 23:43:45,187 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - Closed connection at 26/08/2015 23:43:45 +02:00
+
+2015-08-26 23:43:45,579 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - Opened connection at 26/08/2015 23:43:45 +02:00
+
+2015-08-26 23:43:45,602 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM   (SELECT [Extent1].[id_repository] AS [id_repository], [Extent2].[id_subscription] AS [id_subscription1]
+            FROM  [meta].[Repositories] AS [Extent1]
+            INNER JOIN [meta].[Subscriptions] AS [Extent2] ON [Extent1].[id_subscription] = [Extent2].[id_subscription]
+            WHERE [Extent2].[closing] IS NULL ) AS [Filter1]
+        INNER JOIN [meta].[Users] AS [Extent3] ON [Filter1].[id_subscription1] = [Extent3].[id_subscription]
+        WHERE ([Extent3].[azure_login] LIKE @p__linq__0 ESCAPE N'~') AND ([Filter1].[id_repository] = @p__linq__1)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2015-08-26 23:43:45,602 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - 
+
+2015-08-26 23:43:45,602 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - -- p__linq__0: '%carpentier~_yann@hotmail.fr' (Type = String, Size = 4000)
+
+2015-08-26 23:43:45,603 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - -- p__linq__1: '97f753fa-16de-4598-8e8b-606c7773a69c' (Type = Guid, IsNullable = false)
+
+2015-08-26 23:43:45,603 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - -- Executing at 26/08/2015 23:43:45 +02:00
+
+2015-08-26 23:43:45,609 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - -- Completed in 5 ms with result: SqlDataReader
+
+2015-08-26 23:43:45,609 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - 
+
+2015-08-26 23:43:45,615 [7] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - Closed connection at 26/08/2015 23:43:45 +02:00
+
+2015-08-26 23:43:45,625 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - Opened connection at 26/08/2015 23:43:45 +02:00
+
+2015-08-26 23:43:45,625 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - 
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('crm.Tags')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2015-08-26 23:43:45,625 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - 
+
+2015-08-26 23:43:45,626 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- Executing at 26/08/2015 23:43:45 +02:00
+
+2015-08-26 23:43:45,637 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- Completed in 11 ms with result: 1
+
+2015-08-26 23:43:45,637 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - 
+
+2015-08-26 23:43:45,637 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - Closed connection at 26/08/2015 23:43:45 +02:00
+
+2015-08-26 23:43:45,639 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - Opened connection at 26/08/2015 23:43:45 +02:00
+
+2015-08-26 23:43:45,640 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2015-08-26 23:43:45,640 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - 
+
+2015-08-26 23:43:45,640 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- p__linq__0: 'Luna.Cloud.Data.CRM.CRMContext' (Type = String, Size = 4000)
+
+2015-08-26 23:43:45,640 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- Executing at 26/08/2015 23:43:45 +02:00
+
+2015-08-26 23:43:45,777 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- Failed in 136 ms with error: Nom d'objet 'dbo.__MigrationHistory' non valide.
+
+2015-08-26 23:43:45,777 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - 
+
+2015-08-26 23:43:45,868 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - Closed connection at 26/08/2015 23:43:45 +02:00
+
+2015-08-26 23:43:45,927 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - Opened connection at 26/08/2015 23:43:45 +02:00
+
+2015-08-26 23:43:45,928 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+    )  AS [GroupBy1]
+2015-08-26 23:43:45,928 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - 
+
+2015-08-26 23:43:45,928 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- Executing at 26/08/2015 23:43:45 +02:00
+
+2015-08-26 23:43:46,083 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- Failed in 153 ms with error: Nom d'objet 'dbo.__MigrationHistory' non valide.
+
+2015-08-26 23:43:46,083 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - 
+
+2015-08-26 23:43:46,176 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - Closed connection at 26/08/2015 23:43:46 +02:00
+
+2015-08-26 23:43:46,601 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - Opened connection asynchronously at 26/08/2015 23:43:46 +02:00
+
+2015-08-26 23:43:46,610 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM [crm].[Tags] AS [Extent1]
+        WHERE [Extent1].[id_repository] = @p__linq__0
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2015-08-26 23:43:46,610 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - 
+
+2015-08-26 23:43:46,610 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- p__linq__0: '97f753fa-16de-4598-8e8b-606c7773a69c' (Type = Guid, IsNullable = false)
+
+2015-08-26 23:43:46,611 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- Executing asynchronously at 26/08/2015 23:43:46 +02:00
+
+2015-08-26 23:43:46,616 [11] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- Completed in 5 ms with result: SqlDataReader
+
+2015-08-26 23:43:46,617 [11] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - 
+
+2015-08-26 23:43:46,623 [11] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - Closed connection at 26/08/2015 23:43:46 +02:00
+
+2015-08-26 23:43:46,945 [11] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - Opened connection at 26/08/2015 23:43:46 +02:00
+
+2015-08-26 23:43:46,946 [11] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - SELECT 
+    CASE WHEN ( EXISTS (SELECT 
+        1 AS [C1]
+        FROM   (SELECT [Extent1].[id_repository] AS [id_repository], [Extent2].[id_subscription] AS [id_subscription1]
+            FROM  [meta].[Repositories] AS [Extent1]
+            INNER JOIN [meta].[Subscriptions] AS [Extent2] ON [Extent1].[id_subscription] = [Extent2].[id_subscription]
+            WHERE [Extent2].[closing] IS NULL ) AS [Filter1]
+        INNER JOIN [meta].[Users] AS [Extent3] ON [Filter1].[id_subscription1] = [Extent3].[id_subscription]
+        WHERE ([Extent3].[azure_login] LIKE @p__linq__0 ESCAPE N'~') AND ([Filter1].[id_repository] = @p__linq__1)
+    )) THEN cast(1 as bit) ELSE cast(0 as bit) END AS [C1]
+    FROM  ( SELECT 1 AS X ) AS [SingleRowTable1]
+2015-08-26 23:43:46,947 [11] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - 
+
+2015-08-26 23:43:46,947 [11] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - -- p__linq__0: '%carpentier~_yann@hotmail.fr' (Type = String, Size = 4000)
+
+2015-08-26 23:43:46,948 [11] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - -- p__linq__1: '97f753fa-16de-4598-8e8b-606c7773a69c' (Type = Guid, IsNullable = false)
+
+2015-08-26 23:43:46,948 [11] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - -- Executing at 26/08/2015 23:43:46 +02:00
+
+2015-08-26 23:43:46,949 [11] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - -- Completed in 0 ms with result: SqlDataReader
+
+2015-08-26 23:43:46,949 [11] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - 
+
+2015-08-26 23:43:46,949 [11] DEBUG Luna.Cloud.Data.Meta.MetaDataContext [(null)] - Closed connection at 26/08/2015 23:43:46 +02:00
+
+2015-08-26 23:43:46,951 [11] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - Opened connection asynchronously at 26/08/2015 23:43:46 +02:00
+
+2015-08-26 23:43:46,961 [11] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - SELECT 
+    [Extent1].[id_tag] AS [id_tag], 
+    [Extent1].[id_repository] AS [id_repository], 
+    [Extent1].[name] AS [name], 
+    [Extent1].[color] AS [color], 
+    [Extent1].[last_update] AS [last_update], 
+    [Extent1].[version] AS [version]
+    FROM [crm].[Tags] AS [Extent1]
+    WHERE ([Extent1].[id_repository] = @p__linq__0) AND ([Extent1].[last_update] > @p__linq__1)
+2015-08-26 23:43:46,962 [11] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - 
+
+2015-08-26 23:43:46,962 [11] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- p__linq__0: '97f753fa-16de-4598-8e8b-606c7773a69c' (Type = Guid, IsNullable = false)
+
+2015-08-26 23:43:46,962 [11] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- p__linq__1: '26/08/2015 23:37:38' (Type = DateTime2, IsNullable = false)
+
+2015-08-26 23:43:46,963 [11] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- Executing asynchronously at 26/08/2015 23:43:46 +02:00
+
+2015-08-26 23:43:46,965 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- Completed in 2 ms with result: SqlDataReader
+
+2015-08-26 23:43:46,966 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - 
+
+2015-08-26 23:43:46,967 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - Closed connection at 26/08/2015 23:43:46 +02:00
+
+2015-08-26 23:43:54,223 [11] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - Opened connection asynchronously at 26/08/2015 23:43:54 +02:00
+
+2015-08-26 23:43:54,230 [11] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - SELECT 
+    [Extent1].[id_tag] AS [id_tag], 
+    [Extent1].[id_repository] AS [id_repository], 
+    [Extent1].[name] AS [name], 
+    [Extent1].[color] AS [color], 
+    [Extent1].[last_update] AS [last_update], 
+    [Extent1].[version] AS [version]
+    FROM [crm].[Tags] AS [Extent1]
+    WHERE [Extent1].[id_tag] = @p0
+2015-08-26 23:43:54,230 [11] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - 
+
+2015-08-26 23:43:54,230 [11] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- p0: '1abfe04f-a511-4bc5-b391-31a23a01566e' (Type = Guid)
+
+2015-08-26 23:43:54,231 [11] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- Executing asynchronously at 26/08/2015 23:43:54 +02:00
+
+2015-08-26 23:43:54,233 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- Completed in 1 ms with result: SqlDataReader
+
+2015-08-26 23:43:54,233 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - 
+
+2015-08-26 23:43:54,234 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - Closed connection at 26/08/2015 23:43:54 +02:00
+
+2015-08-26 23:43:58,260 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - Opened connection asynchronously at 26/08/2015 23:43:58 +02:00
+
+2015-08-26 23:43:58,262 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - Started transaction at 26/08/2015 23:43:58 +02:00
+
+2015-08-26 23:43:58,270 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - INSERT [crm].[Tags]([id_tag], [id_repository], [name], [color], [last_update], [version])
+VALUES (@0, @1, @2, @3, @4, @5)
+
+2015-08-26 23:43:58,270 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- @0: '1abfe04f-a511-4bc5-b391-31a23a01566e' (Type = Guid)
+
+2015-08-26 23:43:58,271 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- @1: '97f753fa-16de-4598-8e8b-606c7773a69c' (Type = Guid)
+
+2015-08-26 23:43:58,271 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- @2: 'Nouveau Tag' (Type = String, Size = -1)
+
+2015-08-26 23:43:58,271 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- @3: '#FF6E8E2C' (Type = String, Size = -1)
+
+2015-08-26 23:43:58,271 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- @4: '26/08/2015 23:37:38' (Type = DateTime2)
+
+2015-08-26 23:43:58,271 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- @5: '88c00b3f-960e-4bae-9f7c-da1f2731b9a3' (Type = Guid)
+
+2015-08-26 23:43:58,272 [7] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- Executing asynchronously at 26/08/2015 23:43:58 +02:00
+
+2015-08-26 23:43:58,320 [12] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - -- Failed in 48 ms with error: Les données de chaîne ou binaires seront tronquées.
+L'instruction a été arrêtée.
+
+2015-08-26 23:43:58,321 [12] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - 
+
+2015-08-26 23:43:58,405 [12] DEBUG Luna.Cloud.Data.CRM.CRMContext [(null)] - Closed connection at 26/08/2015 23:43:58 +02:00
+

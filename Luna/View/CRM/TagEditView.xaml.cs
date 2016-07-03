@@ -1,11 +1,9 @@
-﻿using System.Windows.Controls;
-
-namespace Luna.UI.CRM
+﻿namespace Luna.UI.View.CRM
 {
     /// <summary>
     /// Interaction logic for TagEditView.xaml
     /// </summary>
-    public partial class TagEditView : UserControl
+    public partial class TagEditView
     {
         public TagEditView()
         {

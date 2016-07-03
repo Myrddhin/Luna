@@ -172,11 +172,14 @@ namespace Luna.Services.Configuration
         public void Handle(RepositorySaveMessage message)
         {
             var settings = DataProvider.LocalRepositories.FirstOrDefault(x => x.Id == message.Id);
-            settings.Name = message.Name;
-            settings.LastUsed = DateTime.Now;
+            if (settings != null)
+            {
+                settings.Name = message.Name;
+                settings.LastUsed = DateTime.Now;
 
-            DataProvider.SaveAsync(settings).Wait();
-            DataProvider.SaveChangesAsync().Wait();
+                DataProvider.SaveAsync(settings).Wait();
+                DataProvider.SaveChangesAsync().Wait();
+            }
         }
 
         public void Handle(NetworkErrorMessage message)

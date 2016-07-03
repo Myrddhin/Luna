@@ -20,21 +20,18 @@ namespace Luna.Data.Cloud.Meta
         {
             var message = new HttpRequestMessage(HttpMethod.Get, Requester.ApiRoot + "/repositories");
 
-            return await this.GetListFromCloud(message);
+            return await this.GetListFromCloud("/repositories");
         }
 
         public async Task<Repository> GetAsync(Guid id)
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, Requester.ApiRoot + "/repositories/" + id.ToString());
-            return await this.GetItemFromCloud(request);
+            return await this.GetItemFromCloud("/repositories/" + id.ToString());
         }
 
         public async Task<IEnumerable<Repository>> GetAllAsync(DateTime refreshDate)
         {
-            var request = new HttpRequestMessage(HttpMethod.Get,
-                Requester.ApiRoot + "/repositories/date=?" +
+            return await this.GetListFromCloud("/repositories/date=?" +
                 WebUtility.UrlEncode(refreshDate.ToUniversalTime().ToString("o")));
-            return await this.GetListFromCloud(request);
         }
 
         public Task SaveAsync(Repository item)

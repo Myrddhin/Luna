@@ -9,7 +9,6 @@
     xmlns:dxd="http://schemas.devexpress.com/winfx/2008/xaml/docking"
     xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar"
     xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking"
-    xmlns:loki="clr-namespace:Loki.UI.Wpf;assembly=Loki.UI.Wpf"
     x:Class="Luna.UI.Main.MainView"
     Icon="../../Resources/icon.png"
     dx:ThemeManager.ThemeName="DeepBlue"

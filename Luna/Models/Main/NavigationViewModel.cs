@@ -37,7 +37,7 @@ namespace Luna.UI.Main
             Items.Add(configurationGroup);
 
             var globalDirectory = new DocumentMessage<DirectoryViewModel>();
-            var tags = new DocumentMessage<TagEditViewModel>();
+            var tags = new DocumentMessage<TagListViewModel>();
             var crmGroup = new NavigationGroupElement() { DisplayName = "CRM" };
             crmGroup.Children.Add(new MessageElement() { DisplayName = "Annuaire", Message = globalDirectory });
             crmGroup.Children.Add(new MessageElement() { DisplayName = "Tags", Message = tags });

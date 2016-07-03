@@ -59,44 +59,42 @@ namespace Luna.Cloud.Controllers
         [ResponseType(typeof(Tag))]
         public async Task<IHttpActionResult> Put(Guid repositoryId, Tag item)
         {
-            if (!ValidateRepository(repositoryId))
-            {
-                return NotFound();
-            }
-
             var repo = await DataContext.Tags.FindAsync(item.Id);
-            if (repo == null || repo.RepositoryId != repositoryId)
-            {
-                return NotFound();
-            }
-
-            if (item.Version == repo.Version)
-            {
-                item.Version = Guid.NewGuid();
-                DataContext.Tags.Attach(item);
-                await DataContext.SaveChangesAsync();
-                return Ok(item);
-            }
-            else
+            if (repo != null && item.Version != repo.Version)
             {
                 return Conflict();
             }
+
+            item.Version = Guid.NewGuid();
+            DataContext.Entry(item).State = repo == null
+                ? EntityState.Added
+                : EntityState.Modified;
+
+            await DataContext.SaveChangesAsync();
+            return Ok(item);
         }
 
-        public async Task<IHttpActionResult> Delete(Guid repositoryId, Guid id)
+        public async Task<IHttpActionResult> Delete(Guid repositoryId, Guid[] ids)
         {
             if (!ValidateRepository(repositoryId))
             {
                 return NotFound();
             }
 
-            var repo = await DataContext.Tags.FindAsync(id);
-            if (repo == null || repo.RepositoryId != repositoryId)
+            foreach (var id in ids)
             {
-                return NotFound();
+                var repo = await DataContext.Tags.FindAsync(id);
+                if (repo != null && repo.RepositoryId != repositoryId)
+                {
+                    return NotFound();
+                }
+
+                if (repo != null)
+                {
+                    DataContext.Tags.Remove(repo);
+                }
             }
 
-            DataContext.Tags.Remove(repo);
             await DataContext.SaveChangesAsync();
 
             return Ok();

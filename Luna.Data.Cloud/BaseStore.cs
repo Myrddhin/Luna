@@ -16,11 +16,12 @@ namespace Luna.Data.Cloud
 
         public IMessageComponent MessageBus { get; set; }
 
-        protected async Task<T> ExecuteRequestAsync<T>(HttpRequestMessage message, T defaultValue)
+        private async Task<T> ExecuteGetAsync<T>(string address, T defaultValue)
         {
             try
             {
-                var response = await Requester.Send(message);
+                var uri = new Uri(Requester.ApiRoot + address);
+                var response = await Requester.GetAsync(uri);
                 return await response.Content.ReadAsAsync<T>();
             }
             catch (Exception ex)
@@ -30,23 +31,60 @@ namespace Luna.Data.Cloud
             }
         }
 
-        protected async Task<IEnumerable<TClient>> GetListFromCloud(HttpRequestMessage message)
+        private async Task ExecutePutAsync<T>(string address, T value)
         {
-            var result = await ExecuteRequestAsync<IEnumerable<TCloud>>(message, new TCloud[] { });
+            try
+            {
+                var uri = new Uri(Requester.ApiRoot + address);
+                await Requester.PutAsync(uri, value);
+            }
+            catch (Exception ex)
+            {
+                MessageBus.PublishOnCurrentThread(new NetworkErrorMessage(ex));
+            }
+        }
+
+        private async Task ExecuteDeleteAsync(string address)
+        {
+            try
+            {
+                var uri = new Uri(Requester.ApiRoot + address);
+                await Requester.DeleteAsync(uri);
+            }
+            catch (Exception ex)
+            {
+                MessageBus.PublishOnCurrentThread(new NetworkErrorMessage(ex));
+            }
+        }
+
+        protected async Task<IEnumerable<TClient>> GetListFromCloud(string address)
+        {
+            var result = await ExecuteGetAsync<IEnumerable<TCloud>>(address, new TCloud[] { });
 
             return result.ToList().ConvertAll(converter.FromCloud);
         }
 
-        protected async Task<TClient> GetItemFromCloud(HttpRequestMessage message)
+        protected async Task<TClient> GetItemFromCloud(string address)
         {
-            var result = await ExecuteRequestAsync<TCloud>(message, default(TCloud));
+            var result = await ExecuteGetAsync(address, default(TCloud));
 
             return result != null ? converter.FromCloud(result) : default(TClient);
         }
 
-        protected async Task<TScalar> GetScalarFromCloud<TScalar>(HttpRequestMessage message)
+        protected async Task<TScalar> GetScalarFromCloud<TScalar>(string address)
         {
-            return await ExecuteRequestAsync<TScalar>(message, default(TScalar));
+            return await ExecuteGetAsync(address, default(TScalar));
+        }
+
+        protected async Task SaveItemToCloud(string address, TClient item)
+        {
+            var cloud = converter.ToCloud(item);
+            await ExecutePutAsync(address, cloud);
+        }
+
+        protected async Task DeleteItemToCloud(string address)
+        {
+            await ExecuteDeleteAsync(address);
         }
     }
 }
